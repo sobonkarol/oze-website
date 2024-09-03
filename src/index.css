@@ -6,7 +6,7 @@ body, html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif; /* Zmiana czcionki na Lato */
   background-color: #2c2c2c; /* Ciemniejsze tło dla lepszej czytelności */
   color: #e0e0e0; /* Jaśniejszy kolor tekstu */
   line-height: 1.6;
@@ -20,7 +20,8 @@ body {
 
 /* Stylizacja Navbar */
 .navbar-custom {
-  background-color: #1a1a1a; /* Ciemniejszy kolor tła navbaru */
+  background-color: #1a1a1a; /* Kolor tła navbaru */
+  height: 100px; /* Wysokość navbaru */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   position: fixed;
@@ -28,19 +29,23 @@ body {
   z-index: 1000;
 }
 
-.navbar-custom .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #e0e0e0;
-  transition: color 0.3s ease;
+.navbar-custom .navbar-brand-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%; /* Wysokość elementu */
+  transform: translate(-50%, -50%);
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.navbar-custom .navbar-brand:hover {
-  color: #b0b0b0;
+.navbar-custom .navbar-collapse {
+  justify-content: flex-start;
 }
 
 .navbar-custom .nav-link {
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* Zwiększenie rozmiaru czcionki linków */
   color: #e0e0e0;
   padding: 8px 15px;
   transition: all 0.3s ease;
@@ -54,9 +59,9 @@ body {
 
 .nav-divider {
   width: 1px; /* Pionowa linia */
-  height: 24px; /* Wysokość linii odpowiadająca wysokości linków */
+  height: 30px; /* Większa wysokość linii */
   background-color: #707070;
-  margin: auto 10px;
+  margin: auto 15px;
 }
 
 .navbar-custom .navbar-toggler {

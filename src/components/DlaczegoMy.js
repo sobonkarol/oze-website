@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaStar, FaShieldAlt, FaLeaf } from 'react-icons/fa';
+import { FaStar, FaHandsHelping, FaTruck } from 'react-icons/fa';
 
 const DlaczegoMy = () => (
   <section className="why-us-section">
@@ -10,22 +10,22 @@ const DlaczegoMy = () => (
           <div className="card-icon">
             <FaStar size={48} color="#e0e0e0" />
           </div>
-          <h3>Eksperci w branży</h3>
-          <p>Nasza firma to zespół doświadczonych specjalistów z pasją do odnawialnych źródeł energii.</p>
+          <h3>Doświadczenie i Ekspertyza</h3>
+          <p>Jesteśmy zespołem doświadczonych specjalistów, którzy od lat współpracują z instalatorami fotowoltaiki, oferując wsparcie i produkty najwyższej jakości.</p>
         </div>
         <div className="card">
           <div className="card-icon">
-            <FaShieldAlt size={48} color="#e0e0e0" />
+            <FaHandsHelping size={48} color="#e0e0e0" />
           </div>
-          <h3>Najwyższa jakość</h3>
-          <p>Współpracujemy tylko z najlepszymi producentami, dostarczając produkty i rozwiązania najwyższej jakości.</p>
+          <h3>Wsparcie na Każdym Kroku</h3>
+          <p>Zapewniamy kompleksowe doradztwo techniczne oraz elastyczne rozwiązania logistyczne, które ułatwiają realizację projektów od początku do końca.</p>
         </div>
         <div className="card">
           <div className="card-icon">
-            <FaLeaf size={48} color="#e0e0e0" />
+            <FaTruck size={48} color="#e0e0e0" />
           </div>
-          <h3>Zrównoważony rozwój</h3>
-          <p>Stawiamy na ekologiczne rozwiązania, które pomagają naszym klientom zmniejszyć ślad węglowy.</p>
+          <h3>Szybka i Niezawodna Dostawa</h3>
+          <p>Dzięki sprawnemu systemowi logistycznemu, nasze produkty docierają na miejsce szybko i bezpiecznie, zawsze na czas.</p>
         </div>
       </div>
     </div>

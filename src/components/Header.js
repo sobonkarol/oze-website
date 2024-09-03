@@ -10,22 +10,22 @@ const Header = () => {
       <Carousel.Item>
         <img className="d-block w-100 header-image" src={img1} alt="First slide" />
         <Carousel.Caption className="carousel-caption-custom">
-          <h3>Instalacje fotowoltaiczne</h3>
-          <p>Nowoczesne rozwiązania dla Twojego domu.</p>
+          <h3>Dystrybucja sprzętu fotowoltaicznego</h3>
+          <p>Niezawodne rozwiązania dla profesjonalnych instalatorów.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100 header-image" src={img2} alt="Second slide" />
         <Carousel.Caption className="carousel-caption-custom">
-          <h3>Energia wiatrowa</h3>
-          <p>Czysta energia z naturalnych źródeł.</p>
+          <h3>Wsparcie techniczne i doradztwo</h3>
+          <p>Pomagamy instalatorom na każdym etapie projektu.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img className="d-block w-100 header-image" src={img3} alt="Third slide" />
         <Carousel.Caption className="carousel-caption-custom">
-          <h3>Energia wodna</h3>
-          <p>Wykorzystanie mocy wody do produkcji energii.</p>
+          <h3>Szybka i niezawodna dostawa</h3>
+          <p>Zadbamy o terminowe dostarczenie sprzętu na miejsce.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

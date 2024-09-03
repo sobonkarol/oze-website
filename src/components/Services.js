@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaSolarPanel, FaWind, FaWater, FaChartLine, FaTools } from 'react-icons/fa';
+import { FaSolarPanel, FaTools, FaShippingFast, FaHandsHelping, FaHeadset } from 'react-icons/fa';
 
 const Services = () => (
   <section className="services-section">
@@ -15,10 +15,10 @@ const Services = () => (
           >
             <Card className="h-100 shadow-lg card-custom">
               <Card.Body>
-                <FaSolarPanel size={48} color="#333" />
-                <Card.Title>Instalacje fotowoltaiczne</Card.Title>
+                <FaSolarPanel size={48} color="#fff" />
+                <Card.Title>Dystrybucja Sprzętu Fotowoltaicznego</Card.Title>
                 <Card.Text>
-                  Zapewniamy kompleksowe usługi montażu instalacji fotowoltaicznych dla domów i firm, pomagając naszym klientom w oszczędzaniu energii.
+                  Specjalizujemy się w dystrybucji wysokiej jakości sprzętu fotowoltaicznego, zapewniając naszym partnerom dostęp do najnowszych technologii i sprawdzonych rozwiązań.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -31,10 +31,10 @@ const Services = () => (
           >
             <Card className="h-100 shadow-lg card-custom">
               <Card.Body>
-                <FaWind size={48} color="#333" />
-                <Card.Title>Energia Wiatrowa</Card.Title>
+                <FaHandsHelping size={48} color="#fff" style={{ marginBottom: '25px' }} />
+                <Card.Title>Wsparcie Techniczne i Doradztwo</Card.Title>
                 <Card.Text>
-                  Instalujemy turbiny wiatrowe, które umożliwiają generowanie energii z wiatru, idealne dla dużych działek i obszarów wiejskich.
+                  Oferujemy profesjonalne wsparcie techniczne oraz doradztwo na każdym etapie realizacji projektów, aby ułatwić pracę instalatorów i zapewnić optymalne rezultaty.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -47,10 +47,10 @@ const Services = () => (
           >
             <Card className="h-100 shadow-lg card-custom">
               <Card.Body>
-                <FaWater size={48} color="#333" />
-                <Card.Title>Energia Wodna</Card.Title>
+                <FaShippingFast size={48} color="#fff" style={{ marginBottom: '25px' }} />
+                <Card.Title>Logistyka i Szybka Dostawa</Card.Title>
                 <Card.Text>
-                  Oferujemy rozwiązania z zakresu energii wodnej, w tym mikrohydroelektrownie, które pozwalają na efektywne wykorzystanie wody do produkcji energii.
+                  Dbamy o terminowe dostawy sprzętu, oferując elastyczne rozwiązania logistyczne, które pozwalają na sprawną realizację projektów fotowoltaicznych.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -63,42 +63,26 @@ const Services = () => (
           >
             <Card className="h-100 shadow-lg card-custom">
               <Card.Body>
-                <FaChartLine size={48} color="#333" />
-                <Card.Title>Audyt Energetyczny</Card.Title>
-                <Card.Text>
-                  Przeprowadzamy szczegółowe audyty energetyczne, aby ocenić efektywność energetyczną budynków i zaproponować optymalne rozwiązania.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaTools size={48} color="#333" />
-                <Card.Title>Systemy Zarządzania Energią</Card.Title>
-                <Card.Text>
-                  Oferujemy nowoczesne systemy zarządzania energią, które pozwalają na monitorowanie i optymalizację zużycia energii w budynkach.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaTools size={48} color="#333" />
+                <FaTools size={48} color="#fff" style={{ marginBottom: '25px' }} />
                 <Card.Title>Serwis i Utrzymanie</Card.Title>
                 <Card.Text>
-                  Zapewniamy pełne wsparcie serwisowe i utrzymaniowe dla wszystkich naszych instalacji, aby zapewnić ich długotrwałą efektywność.
+                  Zapewniamy kompleksowe wsparcie serwisowe dla naszych instalacji, aby zagwarantować ich długotrwałą efektywność i niezawodność.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </motion.div>
+        </Col>
+        <Col md={4}>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Card className="h-100 shadow-lg card-custom">
+              <Card.Body>
+                <FaHeadset size={48} color="#fff" style={{ marginBottom: '25px' }} />
+                <Card.Title>Obsługa Klienta</Card.Title>
+                <Card.Text>
+                  Nasz zespół jest zawsze gotowy do pomocy, oferując wsparcie na każdym etapie współpracy, od pierwszego kontaktu po zakończenie instalacji.
                 </Card.Text>
               </Card.Body>
             </Card>
