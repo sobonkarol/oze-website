@@ -13,6 +13,9 @@ function App() {
     <>
       <Navigation />
       <Header />
+      <section id="products">
+        <Products />
+      </section>
       <section id="about">
         <About />
       </section>
@@ -21,9 +24,6 @@ function App() {
       </section>
       <section id="why-us">
         <DlaczegoMy />
-      </section>
-      <section id="products">
-        <Products />
       </section>
       <section id="contact">
         <Contact />

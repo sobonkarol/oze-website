@@ -5,7 +5,7 @@ import './Contact.css'; // Import CSS file for styling
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    from_name: '',
+    name: '',
     email: '',
     phone: '',
     message: ''
@@ -58,18 +58,18 @@ const Contact = () => {
             <h3 className="text-center mb-4 form-title">Wyślij nam wiadomość</h3>
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
-                <Form.Label>Imię i nazwisko</Form.Label>
+                <Form.Label>Imię i nazwisko:</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Wprowadź imię i nazwisko"
                   name="name"
-                  value={formData.from_nameme}
+                  value={formData.name}
                   onChange={handleChange}
                   required
                 />
               </Form.Group>
               <Form.Group controlId="formEmail">
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email:</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Wprowadź email"
@@ -80,7 +80,7 @@ const Contact = () => {
                 />
               </Form.Group>
               <Form.Group controlId="formPhone">
-                <Form.Label>Telefon</Form.Label>
+                <Form.Label>Numer telefonu:</Form.Label>
                 <Form.Control
                   type="tel"
                   placeholder="Wprowadź numer telefonu"
@@ -91,7 +91,7 @@ const Contact = () => {
                 />
               </Form.Group>
               <Form.Group controlId="formMessage">
-                <Form.Label>Wiadomość</Form.Label>
+                <Form.Label>Wiadomość:</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
