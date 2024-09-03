@@ -1,0 +1,34 @@
+/* Styl dla sekcji usług */
+.services-section {
+    background-color: #f7f7f7; /* Lekki szary kolor tła */
+    padding: 60px 0;
+  }
+  
+  .services-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .card-custom {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-custom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-custom .card-body {
+    text-align: center;
+  }
+  
+  .card-custom .card-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .card-custom .card-text {
+    font-size: 1rem;
+    color: #666;
+  }  

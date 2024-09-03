@@ -1,13 +1,408 @@
-body {
+/* Ogólne ustawienia */
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2c2c2c; /* Ciemniejsze tło dla lepszej czytelności */
+  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
+  line-height: 1.6;
+}
+
+/* Stylizacja obrazu w nagłówku */
+.header-image {
+  height: 550px;
+  object-fit: cover; /* Aby obraz dobrze wypełniał kontener */
+}
+
+/* Stylizacja Navbar */
+.navbar-custom {
+  background-color: #1a1a1a; /* Ciemniejszy kolor tła navbaru */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #b0b0b0;
+}
+
+.navbar-custom .nav-link {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #b0b0b0;
+  background-color: rgba(176, 176, 176, 0.1);
+  border-radius: 5px;
+}
+
+.nav-divider {
+  width: 1px; /* Pionowa linia */
+  height: 24px; /* Wysokość linii odpowiadająca wysokości linków */
+  background-color: #707070;
+  margin: auto 10px;
+}
+
+.navbar-custom .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Stylizacja sekcji */
+.section {
+  padding: 80px 20px;
+  border-bottom: 1px solid #444; /* Ciemniejsza linia oddzielająca sekcje */
+  margin-top: 60px;
+  background-color: #333; /* Ciemniejsze tło dla sekcji */
+}
+
+/* Stylizacja sekcji Usługi */
+.services-section {
+  padding: 80px 20px;
+  background-color: #2c2c2c;
+  border-top: 5px solid #444;
+  margin-top: 60px;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  position: relative;
+}
+
+.services-section h2::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: #555;
+  position: absolute;
+  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: #333;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex-basis: calc(33% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.1rem;
+}
+
+/* Stylizacja sekcji Produkty */
+.products-section {
+  background-color: #2c2c2c;
+  padding: 80px 20px;
+  border-top: 5px solid #444;
+}
+
+.products-section h2 {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  position: relative;
+}
+
+.products-section h2::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: #555;
+  position: absolute;
+  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Stylizacja O nas */
+.about-section {
+  background-color: #1e1e1e;
+  padding: 80px 20px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Stylizacja sekcji Dlaczego My */
+.why-us-section {
+  background-color: #1e1e1e;
+  padding: 80px 20px;
+}
+
+.section-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.why-us-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  position: relative;
+}
+
+.why-us-section h2::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: #555;
+  position: absolute;
+  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: #333;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  flex-basis: calc(33% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e0e0e0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.1rem;
+}
+
+/* Stylizacja Footer */
+.footer-section {
+  background-color: #1a1a1a;
+  color: #aaa;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer-section p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-section a {
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Stylizacja Carousel Caption */
+.carousel-caption-custom {
+  background: rgba(0, 0, 0, 0.6); /* Ciemniejsze półprzezroczyste tło */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption-custom h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.carousel-caption-custom p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* Dodanie cienia tekstu */
+.carousel-caption-custom h3, 
+.carousel-caption-custom p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Dodanie większych odstępów między elementami w sekcjach */
+.section-content > * {
+  margin-bottom: 50px;
+}
+
+/* Stylizacja sekcji Kontakt */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #2c2c2c;
+  border-top: 5px solid #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Zwiększono odstępy między elementami */
+}
+
+.contact-form,
+.contact-info {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 30px; /* Zwiększono padding wewnętrzny */
+  width: 100%;
+  max-width: 800px;
+}
+
+.contact-info {
+  max-width: 400px;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem; /* Ustawiono większy rozmiar czcionki */
+  font-weight: bold; /* Pogrubienie nagłówka */
+  text-align: center; /* Wyśrodkowanie nagłówka */
+  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
+  margin-bottom: 30px; /* Zwiększono odstęp od dolnej części nagłówka */
+  position: relative; /* Pozycjonowanie dla pseudo-elementu */
+}
+
+.contact-section h2::before {
+  content: "";
+  display: block;
+  width: 50px; /* Szerokość linii pod nagłówkiem */
+  height: 5px; /* Grubość linii */
+  background-color: #555; /* Kolor linii */
+  position: absolute;
+  bottom: -10px; /* Pozycja linii poniżej nagłówka */
+  left: 50%;
+  transform: translateX(-50%); /* Wyśrodkowanie linii */
+}
+
+.contact-form h3,
+.contact-info h3 {
+  font-size: 2rem; /* Rozmiar czcionki dla nagłówków */
+  font-weight: bold; /* Pogrubienie nagłówka */
+  text-align: center; /* Wyśrodkowanie nagłówka */
+  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
+  margin-bottom: 20px; /* Zwiększono odstęp od dolnej części nagłówka */
+  position: relative; /* Pozycjonowanie dla pseudo-elementu */
+}
+
+.contact-form h3::before,
+.contact-info h3::before {
+  content: "";
+  display: block;
+  width: 50px; /* Szerokość linii pod nagłówkiem */
+  height: 5px; /* Grubość linii */
+  background-color: #555; /* Kolor linii */
+  position: absolute;
+  bottom: -10px; /* Pozycja linii poniżej nagłówka */
+  left: 50%;
+  transform: translateX(-50%); /* Wyśrodkowanie linii */
+}
+
+.contact-info p {
+  margin-bottom: 20px; /* Zwiększono odstępy między akapitami */
+  font-size: 1.1rem; /* Dopasowanie rozmiaru czcionki */
+}
+
+.contact-info a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form .form-control {
+  background-color: #333; /* Tło dla pól formularza */
+  border-color: #555; /* Kolor obramowania pól formularza */
+  color: #e0e0e0; /* Kolor tekstu w polach formularza */
+  border-radius: 5px; /* Zaokrąglenie krawędzi pól formularza */
+  padding: 15px; /* Padding wewnętrzny dla lepszego komfortu wpisywania */
+}
+
+.contact-form .form-control::placeholder {
+  color: #888; /* Kolor tekstu placeholder */
+}
+
+.contact-form .btn-primary {
+  background-color: #555; /* Kolor tła przycisku */
+  border-color: #555; /* Kolor obramowania przycisku */
+  border-radius: 5px; /* Zaokrąglenie krawędzi przycisku */
+  padding: 10px 20px; /* Padding wewnętrzny dla lepszego wyglądu przycisku */
+  font-size: 1.1rem; /* Dopasowanie rozmiaru czcionki przycisku */
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #666; /* Kolor tła przycisku po najechaniu */
+  border-color: #666; /* Kolor obramowania przycisku po najechaniu */
 }
