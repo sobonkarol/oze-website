@@ -1,41 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import product1 from '../resources/images/product1.png'; 
-import product2 from '../resources/images/product2.png'; 
-import product3 from '../resources/images/product3.png'; 
-import product4 from '../resources/images/product4.png'; 
-import product5 from '../resources/images/product5.png'; 
-import product6 from '../resources/images/product6.png'; 
+import axios from 'axios';
 
-const products = [
-  { id: 1, name: 'Panel fotowoltaiczny 350W', price: 1200, img: product1, description: 'Wydajny panel fotowoltaiczny do montażu na dachu.' },
-  { id: 2, name: 'Inwerter solarny 5kW', price: 3000, img: product2, description: 'Nowoczesny inwerter do systemów solarnych.' },
-  { id: 3, name: 'Magazyn energii 10kWh', price: 8000, img: product3, description: 'Wysokowydajny magazyn energii do przechowywania nadwyżek.' },
-  { id: 4, name: 'Turbina wiatrowa 3kW', price: 10000, img: product4, description: 'Mała turbina wiatrowa do zasilania domów jednorodzinnych.' },
-  { id: 5, name: 'Pompa ciepła 8kW', price: 15000, img: product5, description: 'Pompa ciepła do ogrzewania i chłodzenia budynków.' },
-  { id: 6, name: 'Zestaw paneli solarnych 4kW', price: 20000, img: product6, description: 'Kompletny zestaw paneli solarnych do montażu na dachu.' },
-];
+const Products = () => {
+  const [products, setProducts] = useState([]);
 
-const Products = () => (
-  <section className="products-section">
-    <Container className="my-5">
-      <h2 className="text-center mb-5">Nasze produkty</h2>
-      <Row className="g-4">
-        {products.map((product) => (
-          <Col md={4} key={product.id}>
-            <Card className="h-100 shadow-sm card-custom">
-              <Card.Img variant="top" src={product.img} />
-              <Card.Body className="d-flex flex-column">
-                <Card.Title>{product.name}</Card.Title>
-                <Card.Text className="flex-grow-1">{product.description}</Card.Text>
-                <Button variant="primary" className="mt-auto">Dodaj do koszyka</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
-  </section>
-);
+  // Fetch products from the server when the component mounts
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5001/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []); // Empty dependency array ensures this runs once when component mounts
+
+  return (
+    <section className="products-section">
+      <Container className="my-5">
+        <h2 className="text-center mb-5">Nasze produkty</h2>
+        <Row className="g-4">
+          {products.map((product) => (
+            <Col md={4} key={product._id}>
+              <Card className="h-100 shadow-sm card-custom">
+                <Card.Img variant="top" src={`http://localhost:5001${product.imageUrl}`} />
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title>{product.name}</Card.Title>
+                  <Card.Text className="flex-grow-1">{product.description}</Card.Text>
+                  <Card.Text><strong>Cena:</strong> {product.price} zł</Card.Text> {/* Wyświetlenie ceny */}
+                  {/* Button for technical sheet (PDF) */}
+                  <Button
+                    variant="danger"
+                    className="mb-2"
+                    href={`http://localhost:5001${product.pdfUrl}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Karta techniczna
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
 
 export default Products;
