@@ -16,7 +16,7 @@ const About = () => (
           <p>
           Zapraszamy do współpracy – razem sprawimy, że praca nad instalacjami fotowoltaicznymi będzie prostsza, szybsza i bardziej efektywna!
           </p>
-          <a href="/contact" className="btn-primary">Dowiedz się więcej</a>
+          <a href="/#contact" className="btn-primary">Dowiedz się więcej</a>
         </div>
       </div>
     </div>
