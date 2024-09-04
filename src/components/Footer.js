@@ -7,7 +7,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <p>&copy; 2024 OZE Firma. Wszelkie prawa zastrzeżone.</p>
+            <p>&copy; 2024 Think Oze. Wszelkie prawa zastrzeżone.</p>
           </Col>
           <Col md={6} className="text-md-right">
             <p>Polityka prywatności | Warunki użytkowania</p>
