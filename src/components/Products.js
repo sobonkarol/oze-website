@@ -27,7 +27,7 @@ const Products = () => {
           {products.map((product) => (
             <Col md={4} key={product._id}>
               <Card className="h-100 shadow-sm card-custom">
-                <Card.Img variant="top" src={`https://https://thinkoze-admin.onrender.com${product.imageUrl}`} />
+                <Card.Img variant="top" src={`https://thinkoze-admin.onrender.com${product.imageUrl}`} />
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Text className="flex-grow-1">{product.description}</Card.Text>
