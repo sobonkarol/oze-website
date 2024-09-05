@@ -9,7 +9,7 @@ const Products = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/products');
+        const response = await axios.get('https://thinkoze-admin.onrender.com/products');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -27,7 +27,7 @@ const Products = () => {
           {products.map((product) => (
             <Col md={4} key={product._id}>
               <Card className="h-100 shadow-sm card-custom">
-                <Card.Img variant="top" src={`http://localhost:5001${product.imageUrl}`} />
+                <Card.Img variant="top" src={`http://https://thinkoze-admin.onrender.com${product.imageUrl}`} />
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{product.name}</Card.Title>
                   <Card.Text className="flex-grow-1">{product.description}</Card.Text>
@@ -36,7 +36,7 @@ const Products = () => {
                   <Button
                     variant="danger"
                     className="mb-2"
-                    href={`http://localhost:5001${product.pdfUrl}`}
+                    href={`https://thinkoze-admin.onrender.com${product.pdfUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
