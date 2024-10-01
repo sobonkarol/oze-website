@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
-import Services from './components/Services';
 import DlaczegoMy from './components/DlaczegoMy';
 import Products from './components/Products';
 import Contact from './components/Contact';

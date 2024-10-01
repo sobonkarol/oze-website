@@ -1,6 +1,6 @@
 .products-section {
   padding: 60px 0;
-  background-color: #215537;
+  background-color: #0C708A;
 }
 
 .section-content {
@@ -65,7 +65,7 @@
 
 /* Styl dla hiperłącza "Karta techniczna" */
 .product-link {
-  color: #609950; /* Ustawienie koloru linku */
+  color: #0C708A; /* Ustawienie koloru linku */
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -91,13 +91,13 @@
 }
 
 .btn-danger {
-  background-color: #1b9652;
+  background-color: #0a657c;
   color: #fff;
   border: none;
 }
 
 .btn-danger:hover {
-  background-color: #a43d46;
+  background-color: #092229;
 }
 
 /* Dostosowanie do mniejszych ekranów */
