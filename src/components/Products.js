@@ -33,9 +33,8 @@ const Products = () => {
                 className="card-img-top"
               />
               <div></div>
-              <h3>{product.name}</h3>
-              <p>{product.description}</p>
               <p><strong>Cena:</strong> {product.price} zł + VAT</p>
+              <h3>{product.name}</h3>
               <a
                 href={`https://thinkoze-admin.onrender.com${product.pdfUrl}`}
                 target="_blank"
