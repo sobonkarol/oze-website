@@ -1,95 +1,49 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { motion } from 'framer-motion';
 import { FaSolarPanel, FaTools, FaShippingFast, FaHandsHelping, FaHeadset } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Services = () => (
   <section className="services-section">
-    <Container>
+    <div className="section-content">
       <h2 className="text-center mb-5">Nasze usługi</h2>
-      <Row className="g-4">
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaSolarPanel size={48} color="#fff" />
-                <Card.Title>Dystrybucja Sprzętu Fotowoltaicznego</Card.Title>
-                <Card.Text>
-                  Specjalizujemy się w dystrybucji wysokiej jakości sprzętu fotowoltaicznego, zapewniając naszym partnerom dostęp do najnowszych technologii i sprawdzonych rozwiązań.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaHandsHelping size={48} color="#fff" style={{ marginBottom: '25px' }} />
-                <Card.Title>Wsparcie Techniczne i Doradztwo</Card.Title>
-                <Card.Text>
-                  Oferujemy profesjonalne wsparcie techniczne oraz doradztwo na każdym etapie realizacji projektów, aby ułatwić pracę instalatorów i zapewnić optymalne rezultaty.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaShippingFast size={48} color="#fff" style={{ marginBottom: '25px' }} />
-                <Card.Title>Logistyka i Szybka Dostawa</Card.Title>
-                <Card.Text>
-                  Dbamy o terminowe dostawy sprzętu, oferując elastyczne rozwiązania logistyczne, które pozwalają na sprawną realizację projektów fotowoltaicznych.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaTools size={48} color="#fff" style={{ marginBottom: '25px' }} />
-                <Card.Title>Serwis i Utrzymanie</Card.Title>
-                <Card.Text>
-                  Zapewniamy kompleksowe wsparcie serwisowe dla naszych instalacji, aby zagwarantować ich długotrwałą efektywność i niezawodność.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-        <Col md={4}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Card className="h-100 shadow-lg card-custom">
-              <Card.Body>
-                <FaHeadset size={48} color="#fff" style={{ marginBottom: '25px' }} />
-                <Card.Title>Obsługa Klienta</Card.Title>
-                <Card.Text>
-                  Nasz zespół jest zawsze gotowy do pomocy, oferując wsparcie na każdym etapie współpracy, od pierwszego kontaktu po zakończenie instalacji.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </motion.div>
-        </Col>
-      </Row>
-    </Container>
+      <div className="card-container">
+        <div className="card">
+          <div className="card-icon">
+            <FaSolarPanel size={48} color="#e0e0e0" />
+          </div>
+          <h3>Dystrybucja Sprzętu Fotowoltaicznego</h3>
+          <p>Specjalizujemy się w dystrybucji wysokiej jakości sprzętu fotowoltaicznego, zapewniając naszym partnerom dostęp do najnowszych technologii i sprawdzonych rozwiązań.</p>
+        </div>
+        <div className="card">
+          <div className="card-icon">
+            <FaHandsHelping size={48} color="#e0e0e0" />
+          </div>
+          <h3>Wsparcie Techniczne i Doradztwo</h3>
+          <p>Oferujemy profesjonalne wsparcie techniczne oraz doradztwo na każdym etapie realizacji projektów, aby ułatwić pracę instalatorów i zapewnić optymalne rezultaty.</p>
+        </div>
+        <div className="card">
+          <div className="card-icon">
+            <FaShippingFast size={48} color="#e0e0e0" />
+          </div>
+          <h3>Logistyka i Szybka Dostawa</h3>
+          <p>Dbamy o terminowe dostawy sprzętu, oferując elastyczne rozwiązania logistyczne, które pozwalają na sprawną realizację projektów fotowoltaicznych.</p>
+        </div>
+        <div className="card">
+          <div className="card-icon">
+            <FaTools size={48} color="#e0e0e0" />
+          </div>
+          <h3>Serwis i Utrzymanie</h3>
+          <p>Zapewniamy kompleksowe wsparcie serwisowe dla naszych instalacji, aby zagwarantować ich długotrwałą efektywność i niezawodność.</p>
+        </div>
+        <div className="card">
+          <div className="card-icon">
+            <FaHeadset size={48} color="#e0e0e0" />
+          </div>
+          <h3>Obsługa Klienta</h3>
+          <p>Nasz zespół jest zawsze gotowy do pomocy, oferując wsparcie na każdym etapie współpracy, od pierwszego kontaktu po zakończenie instalacji.</p>
+        </div>
+      </div>
+    </div>
   </section>
 );
 

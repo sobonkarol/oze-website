@@ -16,12 +16,15 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  /* Dla lepszej obsługi na urządzeniach mobilnych */
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
@@ -34,5 +37,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Media queries dla responsywności */
+@media (max-width: 600px) {
+  .App-logo {
+    height: 30vmin; /* Zmniejszenie logo na małych ekranach */
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Zmniejszenie rozmiaru czcionki */
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .App-logo {
+    height: 20vmin; /* Zmniejszenie logo na bardzo dużych ekranach */
+  }
+
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Zwiększenie rozmiaru czcionki */
+    padding: 40px;
   }
 }

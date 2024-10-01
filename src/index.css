@@ -6,22 +6,23 @@ body, html {
 }
 
 body {
-  font-family: 'Lato', sans-serif; /* Zmiana czcionki na Lato */
-  background-color: #2c2c2c; /* Ciemniejsze tło dla lepszej czytelności */
-  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
+  font-family: 'Lato', sans-serif;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
   line-height: 1.6;
 }
 
 /* Stylizacja obrazu w nagłówku */
 .header-image {
-  height: 550px;
-  object-fit: cover; /* Aby obraz dobrze wypełniał kontener */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Stylizacja Navbar */
 .navbar-custom {
-  background-color: #1a1a1a; /* Kolor tła navbaru */
-  height: 100px; /* Wysokość navbaru */
+  background-color: #1a1a1a;
+  height: 100px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   padding: 10px 20px;
   position: fixed;
@@ -32,10 +33,8 @@ body {
 .navbar-custom .navbar-brand-center {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 50%; /* Wysokość elementu */
+  top: 50%;
   transform: translate(-50%, -50%);
-  margin: auto;
   display: flex;
   align-items: center;
 }
@@ -45,7 +44,7 @@ body {
 }
 
 .navbar-custom .nav-link {
-  font-size: 1.3rem; /* Zwiększenie rozmiaru czcionki linków */
+  font-size: 1.1rem;
   color: #e0e0e0;
   padding: 8px 15px;
   transition: all 0.3s ease;
@@ -58,8 +57,8 @@ body {
 }
 
 .nav-divider {
-  width: 1px; /* Pionowa linia */
-  height: 30px; /* Większa wysokość linii */
+  width: 1px;
+  height: 30px;
   background-color: #707070;
   margin: auto 15px;
 }
@@ -70,26 +69,26 @@ body {
 
 /* Stylizacja sekcji */
 .section {
-  padding: 80px 20px;
-  border-bottom: 1px solid #444; /* Ciemniejsza linia oddzielająca sekcje */
-  margin-top: 60px;
-  background-color: #333; /* Ciemniejsze tło dla sekcji */
+  padding: 60px 15px;
+  border-bottom: 1px solid #444;
+  margin-top: 80px;
+  background-color: #333;
 }
 
 /* Stylizacja sekcji Usługi */
 .services-section {
-  padding: 80px 20px;
+  padding: 60px 15px;
   background-color: #2c2c2c;
   border-top: 5px solid #444;
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .services-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   color: #e0e0e0;
-  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -100,25 +99,26 @@ body {
   height: 5px;
   background-color: #555;
   position: absolute;
-  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .card-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
 }
 
 .card {
   background: #333;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
-  flex-basis: calc(33% - 40px);
+  flex: 1 1 calc(33% - 40px);
+  max-width: calc(33% - 40px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   color: #e0e0e0;
 }
@@ -129,31 +129,61 @@ body {
 }
 
 .card-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
   color: #e0e0e0;
 }
 
 .card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+/* Responsywność dla kart */
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; /* Ustawienie kolumnowego układu */
+    justify-content: center; /* Wyśrodkowanie w pionie */
+    align-items: center; /* Wyśrodkowanie w poziomie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    white-space: normal; /* Upewnienie się, że tekst jest wyświetlany normalnie */
+  }
+
+  .card p {
+    writing-mode: horizontal-tb; /* Ustawienie normalnego trybu pisania */
+    text-align: center; /* Wyśrodkowanie tekstu */
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
 }
 
 /* Stylizacja sekcji Produkty */
 .products-section {
   background-color: #2c2c2c;
-  padding: 80px 20px;
+  padding: 60px 15px;
   border-top: 5px solid #444;
 }
 
 .products-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #e0e0e0;
-  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -164,7 +194,7 @@ body {
   height: 5px;
   background-color: #555;
   position: absolute;
-  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -172,7 +202,7 @@ body {
 /* Stylizacja O nas */
 .about-section {
   background-color: #1e1e1e;
-  padding: 80px 20px;
+  padding: 60px 15px;
 }
 
 .about-content {
@@ -184,7 +214,7 @@ body {
 /* Stylizacja sekcji Dlaczego My */
 .why-us-section {
   background-color: #1e1e1e;
-  padding: 80px 20px;
+  padding: 60px 15px;
 }
 
 .section-content {
@@ -193,11 +223,11 @@ body {
 }
 
 .why-us-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   color: #e0e0e0;
-  margin-bottom: 50px; /* Większy odstęp od dolnej części nagłówka */
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -208,47 +238,9 @@ body {
   height: 5px;
   background-color: #555;
   position: absolute;
-  bottom: -15px; /* Większy odstęp poniżej nagłówka */
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.card {
-  background: #333;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  flex-basis: calc(33% - 40px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #e0e0e0;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.card-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #e0e0e0;
-}
-
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.card p {
-  font-size: 1.1rem;
 }
 
 /* Stylizacja Footer */
@@ -256,7 +248,7 @@ body {
   background-color: #1a1a1a;
   color: #aaa;
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 15px;
 }
 
 .footer-section p {
@@ -275,52 +267,52 @@ body {
 
 /* Stylizacja Carousel Caption */
 .carousel-caption-custom {
-  background: rgba(0, 0, 0, 0.6); /* Ciemniejsze półprzezroczyste tło */
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   text-align: center;
   backdrop-filter: blur(5px);
 }
 
 .carousel-caption-custom h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .carousel-caption-custom p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0;
   line-height: 1.4;
 }
 
 /* Dodanie cienia tekstu */
-.carousel-caption-custom h3, 
+.carousel-caption-custom h3,
 .carousel-caption-custom p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Dodanie większych odstępów między elementami w sekcjach */
 .section-content > * {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 /* Stylizacja sekcji Kontakt */
 .contact-section {
-  padding: 80px 20px;
+  padding: 60px 15px;
   background-color: #2c2c2c;
   border-top: 5px solid #444;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* Zwiększono odstępy między elementami */
+  gap: 30px;
 }
 
 .contact-form,
 .contact-info {
   background: #1e1e1e;
   border-radius: 10px;
-  padding: 30px; /* Zwiększono padding wewnętrzny */
+  padding: 20px;
   width: 100%;
   max-width: 800px;
 }
@@ -330,52 +322,52 @@ body {
 }
 
 .contact-section h2 {
-  font-size: 2.5rem; /* Ustawiono większy rozmiar czcionki */
-  font-weight: bold; /* Pogrubienie nagłówka */
-  text-align: center; /* Wyśrodkowanie nagłówka */
-  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
-  margin-bottom: 30px; /* Zwiększono odstęp od dolnej części nagłówka */
-  position: relative; /* Pozycjonowanie dla pseudo-elementu */
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 .contact-section h2::before {
   content: "";
   display: block;
-  width: 50px; /* Szerokość linii pod nagłówkiem */
-  height: 5px; /* Grubość linii */
-  background-color: #555; /* Kolor linii */
+  width: 50px;
+  height: 5px;
+  background-color: #555;
   position: absolute;
-  bottom: -10px; /* Pozycja linii poniżej nagłówka */
+  bottom: -10px;
   left: 50%;
-  transform: translateX(-50%); /* Wyśrodkowanie linii */
+  transform: translateX(-50%);
 }
 
 .contact-form h3,
 .contact-info h3 {
-  font-size: 2rem; /* Rozmiar czcionki dla nagłówków */
-  font-weight: bold; /* Pogrubienie nagłówka */
-  text-align: center; /* Wyśrodkowanie nagłówka */
-  color: #e0e0e0; /* Jaśniejszy kolor tekstu */
-  margin-bottom: 20px; /* Zwiększono odstęp od dolnej części nagłówka */
-  position: relative; /* Pozycjonowanie dla pseudo-elementu */
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .contact-form h3::before,
 .contact-info h3::before {
   content: "";
   display: block;
-  width: 50px; /* Szerokość linii pod nagłówkiem */
-  height: 5px; /* Grubość linii */
-  background-color: #555; /* Kolor linii */
+  width: 50px;
+  height: 5px;
+  background-color: #555;
   position: absolute;
-  bottom: -10px; /* Pozycja linii poniżej nagłówka */
+  bottom: -10px;
   left: 50%;
-  transform: translateX(-50%); /* Wyśrodkowanie linii */
+  transform: translateX(-50%);
 }
 
 .contact-info p {
-  margin-bottom: 20px; /* Zwiększono odstępy między akapitami */
-  font-size: 1.1rem; /* Dopasowanie rozmiaru czcionki */
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .contact-info a {
@@ -388,26 +380,105 @@ body {
 }
 
 .contact-form .form-control {
-  background-color: #333; /* Tło dla pól formularza */
-  border-color: #555; /* Kolor obramowania pól formularza */
-  color: #e0e0e0; /* Kolor tekstu w polach formularza */
-  border-radius: 5px; /* Zaokrąglenie krawędzi pól formularza */
-  padding: 15px; /* Padding wewnętrzny dla lepszego komfortu wpisywania */
+  background-color: #333;
+  border-color: #555;
+  color: #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .contact-form .form-control::placeholder {
-  color: #888; /* Kolor tekstu placeholder */
+  color: #888;
 }
 
 .contact-form .btn-primary {
-  background-color: #555; /* Kolor tła przycisku */
-  border-color: #555; /* Kolor obramowania przycisku */
-  border-radius: 5px; /* Zaokrąglenie krawędzi przycisku */
-  padding: 10px 20px; /* Padding wewnętrzny dla lepszego wyglądu przycisku */
-  font-size: 1.1rem; /* Dopasowanie rozmiaru czcionki przycisku */
+  background-color: #555;
+  border-color: #555;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
 }
 
 .contact-form .btn-primary:hover {
-  background-color: #666; /* Kolor tła przycisku po najechaniu */
-  border-color: #666; /* Kolor obramowania przycisku po najechaniu */
+  background-color: #666;
+  border-color: #666;
+}
+
+/* Responsywność dla sekcji kontaktowej */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 10px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 15px;
+  }
+
+  .contact-form h3,
+  .contact-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ogólne media queries dla responsywności */
+@media (max-width: 992px) {
+  .navbar-custom {
+    height: 80px;
+    padding: 5px 15px;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 1rem;
+  }
+
+  .section,
+  .services-section,
+  .products-section,
+  .about-section,
+  .why-us-section,
+  .contact-section {
+    padding: 50px 10px;
+  }
+
+  .services-section h2,
+  .products-section h2,
+  .why-us-section h2,
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-custom {
+    height: 60px;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .navbar-custom .navbar-brand-center {
+    top: 50%;
+  }
+
+  .services-section h2,
+  .products-section h2,
+  .why-us-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption-custom h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption-custom p {
+    font-size: 0.9rem;
+  }
 }
