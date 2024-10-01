@@ -1,6 +1,6 @@
 .products-section {
   padding: 60px 0;
-  background-color: #0C708A;
+  background-color: #ffffff;
 }
 
 .section-content {
@@ -58,7 +58,7 @@
 
 .card-text {
   font-size: 1rem;
-  color: #4a4a4a;
+  color: #ffffff;
   margin-bottom: 15px;
   flex-grow: 1; /* Wypełnia wolną przestrzeń, by przyciski były wyrównane */
 }
@@ -100,6 +100,15 @@
   background-color: #092229;
 }
 
+/* Stylizacja nagłówka "Dostępne produkty" */
+.product-header {
+  font-size: 2.5rem; /* Ustawienie rozmiaru czcionki */
+  color: #0a657c !important; /* Zmiana koloru tekstu z użyciem !important */
+  font-weight: bold; /* Pogrubienie tekstu */
+  margin-bottom: 30px; /* Ustawienie odstępu od dolnej części nagłówka */
+}
+
+
 /* Dostosowanie do mniejszych ekranów */
 @media (max-width: 1200px) {
   .card {
@@ -122,3 +131,4 @@
     height: 150px;
   }
 }
+

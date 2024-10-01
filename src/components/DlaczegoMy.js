@@ -4,7 +4,7 @@ import { FaStar, FaHandsHelping, FaTruck } from 'react-icons/fa';
 const DlaczegoMy = () => (
   <section className="why-us-section">
     <div className="section-content">
-      <h2 className="text-center mb-5">Dlaczego my?</h2>
+      <h2 className="text-center mb-5">Klimatyzacja</h2>
       <div className="card-container">
         <div className="card">
           <div className="card-icon">

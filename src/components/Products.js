@@ -22,9 +22,10 @@ const Products = () => {
   }, []);
 
   return (
-    <section className="products-section">
+    <section className="products-section" id="products-section">
       <div className="section-content">
-        <h2 className="text-center mb-5">Nasze produkty</h2>
+        {/* Dodanie klasy "product-header" do nagłówka h2 */}
+        <h2 className="text-center mb-5 product-header">Dostępne produkty</h2>
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>

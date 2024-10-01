@@ -6,7 +6,7 @@ body, html {
 
 /* Stylizacja navbar */
 .navbar-custom {
-  background-color: #0C708A;
+  background-color: #ffffff;
   height: 120px;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@ body, html {
 }
 
 .think-oz-text {
-  color: #fff;
+  color: #063e4d;
   font-size: 24px;
   margin-left: 10px;
 }
@@ -43,7 +43,7 @@ body, html {
 .toggler-bar {
   width: 100%;
   height: 3px;
-  background-color: #fff;
+  background-color: #0a657c;
   transition: all 0.3s ease;
 }
 
@@ -87,7 +87,7 @@ body, html {
 }
 
 .menu-items .menu-link {
-  color: #fff;
+  color: #ffffff !important;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -154,25 +154,25 @@ body, html {
 
 /* Styl dla aktywnego linku */
 .navbar-custom .nav-link-custom {
-  color: #e0e0e0; /* Standardowy kolor czcionki */
+  color: #063e4d; /* Standardowy kolor czcionki */
   transition: background-color 0.3s ease, color 0.3s ease;
   padding: 10px 15px; /* Dodanie odstępów */
   border-radius: 5px; /* Zaokrąglenie krawędzi */
 }
 
 .navbar-custom .nav-link-custom:hover {
-  color: #333; /* Kolor czcionki po najechaniu */
-  background-color: #a6a09f; /* Pomarańczowe tło przy najechaniu */
+  color: #ffffff !important;  /* Kolor czcionki po najechaniu */
+  background-color: #063e4d; /* Pomarańczowe tło przy najechaniu */
 }
 
 /* Aktywny link z pasującym tłem */
 .navbar-custom .nav-link-custom.active {
-  color: #fff; /* Kolor czcionki dla aktywnego linku */
+  color: #063e4d; /* Kolor czcionki dla aktywnego linku */
 }
 
 /* Styl dla pełnoekranowego menu */
 .menu-items .menu-link {
-  color: #fff; /* Kolor czcionki w pełnoekranowym menu */
+  color: #063e4d; /* Kolor czcionki w pełnoekranowym menu */
   font-size: 24px;
   padding: 10px 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -180,9 +180,9 @@ body, html {
 }
 
 .menu-items .menu-link:hover {
-  background-color: #444; /* Szare tło przy najechaniu */
+  background-color: #063e4d; /* Szare tło przy najechaniu */
 }
 
 .menu-items .menu-link.active {
-  color: #fff; /* Kolor tekstu */
+  color: #063e4d; /* Kolor tekstu */
 }

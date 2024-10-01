@@ -19,14 +19,14 @@ function App() {
       <section id="products">
         <Products />
       </section>
-      <section id="why-us">
+      <section id="dlaczegoMy">
         <DlaczegoMy />
-      </section>
-      <section id="about">
-        <About />
       </section>
       <section id="contact">
         <Contact />
+      </section>
+      <section id="about">
+        <About />
       </section>
       <Footer />
     </ProductProvider>

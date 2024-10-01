@@ -62,21 +62,7 @@ const Navigation = () => {
             className={`menu-link ${activeLink === "services" ? "active" : ""}`}
             onClick={() => handleLinkClick("services")}
           >
-            Usługi
-          </Nav.Link>
-          <Nav.Link
-            href="#why-us"
-            className={`menu-link ${activeLink === "why-us" ? "active" : ""}`}
-            onClick={() => handleLinkClick("why-us")}
-          >
-            Dlaczego my
-          </Nav.Link>
-          <Nav.Link
-            href="#about"
-            className={`menu-link ${activeLink === "about" ? "active" : ""}`}
-            onClick={() => handleLinkClick("about")}
-          >
-            O nas
+            Klimatyzacja
           </Nav.Link>
           <Nav.Link
             href="#contact"
@@ -85,6 +71,14 @@ const Navigation = () => {
           >
             Kontakt
           </Nav.Link>
+          <Nav.Link
+            href="#about"
+            className={`menu-link ${activeLink === "about" ? "active" : ""}`}
+            onClick={() => handleLinkClick("about")}
+          >
+            O nas
+          </Nav.Link>
+
         </Nav>
       </div>
 
@@ -106,15 +100,15 @@ const Navigation = () => {
             className={`nav-link-custom ${activeLink === "services" ? "active" : ""}`}
             onClick={() => handleLinkClick("services")}
           >
-            Usługi
+            Klimatyzacja
           </Nav.Link>
           <div className="nav-divider"></div>
           <Nav.Link
-            href="#why-us"
-            className={`nav-link-custom ${activeLink === "why-us" ? "active" : ""}`}
-            onClick={() => handleLinkClick("why-us")}
+            href="#contact"
+            className={`nav-link-custom ${activeLink === "contact" ? "active" : ""}`}
+            onClick={() => handleLinkClick("contact")}
           >
-            Dlaczego my
+            Kontakt
           </Nav.Link>
           <div className="nav-divider"></div>
           <Nav.Link
@@ -125,13 +119,7 @@ const Navigation = () => {
             O nas
           </Nav.Link>
           <div className="nav-divider"></div>
-          <Nav.Link
-            href="#contact"
-            className={`nav-link-custom ${activeLink === "contact" ? "active" : ""}`}
-            onClick={() => handleLinkClick("contact")}
-          >
-            Kontakt
-          </Nav.Link>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>
