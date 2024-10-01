@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa"; // Import ikon
 import logo from "../resources/images/logo.png"; // Importuj logo
-import "./Navigation.css"; // Importuj dodatkowy plik CSS
+import "./Navigation.css"; // Import CSS
 
 const Navigation = () => {
   const [expanded, setExpanded] = useState(false);
-  const [activeLink, setActiveLink] = useState("products"); // Przechowuje aktywny link
+  const [activeLink, setActiveLink] = useState("products");
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -15,7 +16,6 @@ const Navigation = () => {
     setExpanded(!expanded);
   };
 
-  // Ustawia aktywny link po kliknięciu
   const handleLinkClick = (link) => {
     setActiveLink(link);
     setExpanded(false);
@@ -28,11 +28,26 @@ const Navigation = () => {
       className={`navbar-custom ${expanded ? "menu-open" : ""}`}
       fixed="top"
     >
+      {/* Logo */}
       <Navbar.Brand onClick={scrollToTop} className="navbar-brand-center">
         <img src={logo} alt="Logo" className="navbar-logo" />
         <div className="think-oz-text">think oze</div>
       </Navbar.Brand>
 
+      {/* Sekcja kontaktu */}
+      <div className="navbar-contact-info">
+        <a href="tel:+48694413377" className="navbar-contact-item">
+          <FaPhoneAlt />
+          +48 694 413 377
+        </a>
+        <span className="navbar-divider">|</span> {/* Dzielnik */}
+        <a href="mailto:sobon@thinkoze.pl" className="navbar-contact-item">
+          <FaEnvelope />
+          sobon@thinkoze.pl
+        </a>
+      </div>
+
+      {/* Menu nawigacyjne */}
       <Navbar.Toggle
         aria-controls="basic-navbar-nav"
         onClick={handleToggle}
@@ -45,51 +60,16 @@ const Navigation = () => {
         </div>
       </Navbar.Toggle>
 
-      <div className={`full-screen-menu ${expanded ? "menu-visible" : ""}`}>
-        <button className="close-btn" onClick={handleToggle}>
-          ×
-        </button>
-        <Nav className="menu-items">
-          <Nav.Link
-            href="#products"
-            className={`menu-link ${activeLink === "products" ? "active" : ""}`}
-            onClick={() => handleLinkClick("products")}
-          >
-            Fotowoltaika
-          </Nav.Link>
-          <Nav.Link
-            href="#services"
-            className={`menu-link ${activeLink === "services" ? "active" : ""}`}
-            onClick={() => handleLinkClick("services")}
-          >
-            Klimatyzacja
-          </Nav.Link>
-          <Nav.Link
-            href="#contact"
-            className={`menu-link ${activeLink === "contact" ? "active" : ""}`}
-            onClick={() => handleLinkClick("contact")}
-          >
-            Kontakt
-          </Nav.Link>
-          <Nav.Link
-            href="#about"
-            className={`menu-link ${activeLink === "about" ? "active" : ""}`}
-            onClick={() => handleLinkClick("about")}
-          >
-            O nas
-          </Nav.Link>
-
-        </Nav>
-      </div>
-
       <Navbar.Collapse
         id="basic-navbar-nav"
-        className={`navbar-collapse-custom ${expanded ? "collapse-hidden" : ""}`}
+        className="navbar-collapse-custom"
       >
         <Nav className="ml-auto">
           <Nav.Link
             href="#products"
-            className={`nav-link-custom ${activeLink === "products" ? "active" : ""}`}
+            className={`nav-link-custom ${
+              activeLink === "products" ? "active" : ""
+            }`}
             onClick={() => handleLinkClick("products")}
           >
             Fotowoltaika
@@ -97,7 +77,9 @@ const Navigation = () => {
           <div className="nav-divider"></div>
           <Nav.Link
             href="#services"
-            className={`nav-link-custom ${activeLink === "services" ? "active" : ""}`}
+            className={`nav-link-custom ${
+              activeLink === "services" ? "active" : ""
+            }`}
             onClick={() => handleLinkClick("services")}
           >
             Klimatyzacja
@@ -105,7 +87,9 @@ const Navigation = () => {
           <div className="nav-divider"></div>
           <Nav.Link
             href="#contact"
-            className={`nav-link-custom ${activeLink === "contact" ? "active" : ""}`}
+            className={`nav-link-custom ${
+              activeLink === "contact" ? "active" : ""
+            }`}
             onClick={() => handleLinkClick("contact")}
           >
             Kontakt
@@ -113,13 +97,13 @@ const Navigation = () => {
           <div className="nav-divider"></div>
           <Nav.Link
             href="#about"
-            className={`nav-link-custom ${activeLink === "about" ? "active" : ""}`}
+            className={`nav-link-custom ${
+              activeLink === "about" ? "active" : ""
+            }`}
             onClick={() => handleLinkClick("about")}
           >
             O nas
           </Nav.Link>
-          <div className="nav-divider"></div>
-
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -6,16 +6,26 @@ body, html {
 
 /* Stylizacja navbar */
 .navbar-custom {
+  position: relative; /* Dodano, aby elementy absolutne były pozycjonowane względem navbara */
   background-color: #ffffff;
   height: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Wycentrowanie elementów wewnątrz */
+  padding: 0 30px;
   transition: all 0.3s ease;
 }
 
+/* Stylizacja logo */
+.navbar-brand-center {
+  position: absolute; /* Aby umieścić logo po lewej stronie */
+  left: 30px;
+  display: flex;
+  align-items: center;
+}
+
 .navbar-logo {
-  height: 80px;
+  height: 60px;
   width: auto;
 }
 
@@ -27,6 +37,8 @@ body, html {
 
 /* Hamburger menu styling */
 .navbar-toggler-custom {
+  position: absolute; /* Aby umieścić przycisk menu po prawej stronie */
+  right: 30px;
   background: none;
   border: none;
   cursor: pointer;
@@ -87,14 +99,21 @@ body, html {
 }
 
 .menu-items .menu-link {
-  color: #ffffff !important;
+  color: #063e4d; /* Kolor czcionki w pełnoekranowym menu */
   font-size: 24px;
+  padding: 10px 15px;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
 }
 
 .menu-items .menu-link:hover {
-  color: #ffffff;
+  background-color: #063e4d; /* Tło przy najechaniu */
+  color: #ffffff !important;
+}
+
+.menu-items .menu-link.active {
+  color: #063e4d;
 }
 
 /* Ukrycie standardowego rozwijania menu */
@@ -112,11 +131,19 @@ body, html {
 
 /* Ukrywanie linków na wypadek konfliktu */
 .nav-link-custom {
-  color: #fff;
+  color: #063e4d; /* Standardowy kolor czcionki */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .nav-link-custom:hover {
-  color: #838383;
+  color: #ffffff !important; /* Kolor czcionki po najechaniu */
+  background-color: #063e4d; /* Tło przy najechaniu */
+}
+
+.nav-link-custom.active {
+  color: #063e4d; /* Kolor czcionki dla aktywnego linku */
 }
 
 /* Przycisk zamknięcia */
@@ -131,10 +158,57 @@ body, html {
   cursor: pointer;
 }
 
+/* Wyśrodkowanie sekcji kontaktu w nawigacji */
+.navbar-contact-info {
+  position: absolute; /* Pozwala na pozycjonowanie względem navbara */
+  left: 50%; /* Ustawienie lewego krańca na 50% szerokości navbara */
+  transform: translateX(-50%); /* Przesunięcie o połowę szerokości, aby wycentrować */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Stylizacja poszczególnych elementów kontaktu */
+.navbar-contact-item {
+  color: #00506b; /* Kolor ikon i tekstu */
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar-contact-item:hover {
+  color: #00293d; /* Zmiana koloru tekstu przy najechaniu */
+}
+
+/* Dzielnik */
+.navbar-divider {
+  font-size: 1.2rem;
+  color: #00506b;
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
   .navbar-custom {
     padding: 10px;
+    height: auto; /* Pozwoli na dynamiczną wysokość */
+  }
+
+  .navbar-contact-info {
+    position: static; /* Resetuje pozycjonowanie */
+    transform: none; /* Usuwa transformacje */
+    margin-top: 10px; /* Dodaje odstęp od góry */
+  }
+
+  .navbar-brand-center {
+    position: static; /* Resetuje pozycjonowanie */
+    margin-bottom: 10px; /* Dodaje odstęp od dołu */
+  }
+
+  .navbar-toggler-custom {
+    position: static; /* Resetuje pozycjonowanie */
+    margin-top: 10px; /* Dodaje odstęp od góry */
   }
 
   .menu-items .menu-link {
@@ -152,37 +226,7 @@ body, html {
   }
 }
 
-/* Styl dla aktywnego linku */
-.navbar-custom .nav-link-custom {
-  color: #063e4d; /* Standardowy kolor czcionki */
-  transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 10px 15px; /* Dodanie odstępów */
-  border-radius: 5px; /* Zaokrąglenie krawędzi */
-}
-
-.navbar-custom .nav-link-custom:hover {
-  color: #ffffff !important;  /* Kolor czcionki po najechaniu */
-  background-color: #063e4d; /* Pomarańczowe tło przy najechaniu */
-}
-
-/* Aktywny link z pasującym tłem */
-.navbar-custom .nav-link-custom.active {
-  color: #063e4d; /* Kolor czcionki dla aktywnego linku */
-}
-
-/* Styl dla pełnoekranowego menu */
-.menu-items .menu-link {
-  color: #063e4d; /* Kolor czcionki w pełnoekranowym menu */
-  font-size: 24px;
-  padding: 10px 15px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 5px;
-}
-
-.menu-items .menu-link:hover {
-  background-color: #063e4d; /* Szare tło przy najechaniu */
-}
-
-.menu-items .menu-link.active {
-  color: #063e4d; /* Kolor tekstu */
+/* Ukrycie standardowego rozwijania menu (jeśli nadal jest potrzebne) */
+.collapse-hidden {
+  display: none;
 }
