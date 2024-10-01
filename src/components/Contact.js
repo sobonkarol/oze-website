@@ -30,7 +30,7 @@ const Contact = () => {
 
     // Send email using EmailJS
     emailjs.send(
-      'service_c7wd60u', // Replace with your EmailJS service ID
+      'service_pg59qm9', // Replace with your EmailJS service ID
       'template_imyy55r', // Replace with your EmailJS template ID
       formData,
       'HCR7mksjMVNpvqZA_' // Replace with your EmailJS user ID
@@ -111,10 +111,9 @@ const Contact = () => {
           </Col>
           <Col md={5} className="contact-info">
             <div className="text-center"> {/* Center the contact info */}
-              <p><strong>Adres:</strong> ul. Poniatowskiego 6 05-090 Raszyn</p>
-              <p><strong>Telefon:</strong> +48 123 456 789</p>
-              <p><strong>Email:</strong> kontakt@przyklad.pl</p>
-              <p><strong>Godziny otwarcia:</strong> Pon-Pt 9:00 - 17:00</p>
+              <p><strong>Adres:</strong> ul. Poniatowskiego 6, 05-090 Raszyn</p>
+              <p><strong>Telefon:</strong> +48 694 413 377</p>
+              <p><strong>Godziny otwarcia:</strong> Pon-Pt 8:00 - 16:00</p>
             </div>
           </Col>
         </Row>
