@@ -1,0 +1,124 @@
+/* Basic styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-container {
+    position: relative;
+    z-index: 100;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .navbar-logo h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+  }
+  
+  .hamburger .line {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Overlay menu */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  
+  .menu-open {
+    transform: translateX(0);
+  }
+  
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-items li {
+    margin: 20px 0;
+  }
+  
+  .menu-items li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-items li a:hover {
+    color: #ff6347; /* Change to your preferred hover color */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  
+    .navbar {
+      justify-content: flex-start;
+    }
+  
+    .navbar-logo {
+      margin-right: auto;
+    }
+  
+    .menu-overlay {
+      display: none; /* Hide the overlay menu on desktop */
+    }
+  }  
