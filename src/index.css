@@ -15,7 +15,7 @@ body {
 /* Stylizacja obrazu w nagłówku */
 .header-image {
   width: 100%;
-  height: 600px; /* Stała wysokość dla obrazów w Carousel */
+  height: 500px; /* Stała wysokość dla obrazów w Carousel */
   object-fit: cover;
   object-position: center; /* Wyśrodkowanie obrazu */
 }
@@ -34,7 +34,7 @@ body {
 
 /* Stylizacja Carousel */
 .carousel-item {
-  height: 600px; /* Stała wysokość pozycji Carousel */
+  height: 500px; /* Stała wysokość pozycji Carousel */
 }
 
 .carousel-item img {
@@ -116,11 +116,15 @@ body {
 
 .navbar-custom .navbar-toggler-custom {
   border: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0); /* Jasne półprzezroczyste tło */
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.navbar-toggler-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+.navbar-toggler-custom:hover,
+.navbar-toggler-custom:focus {
+  background-color: rgba(255, 255, 255, 0.4); /* Tło po najechaniu lub focus */
 }
 
 .navbar-custom .navbar-collapse {
@@ -195,6 +199,15 @@ body {
 
   .nav-divider {
     display: none;
+  }
+
+  .navbar-custom .navbar-toggler-custom {
+    background-color: rgba(255, 255, 255, 0.3); /* Mocniejsze tło na mniejszych ekranach */
+  }
+
+  .navbar-custom .navbar-toggler-custom:hover,
+  .navbar-custom .navbar-toggler-custom:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* Jeszcze mocniejsze tło po najechaniu */
   }
 }
 

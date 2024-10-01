@@ -4,7 +4,6 @@ import logo from "../resources/images/logo.png"; // Importuj logo
 import "./Navigation.css"; // Importuj dodatkowy plik CSS
 
 const Navigation = () => {
-  // Użycie useState do zarządzania rozwijaniem i zwijaniem menu
   const [expanded, setExpanded] = useState(false);
 
   const scrollToTop = () => {
@@ -19,6 +18,14 @@ const Navigation = () => {
       className="navbar-custom"
       fixed="top"
     >
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        onClick={() => setExpanded(expanded ? false : "expanded")}
+        className="navbar-toggler-custom"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </Navbar.Toggle>
+
       <Navbar.Brand
         onClick={scrollToTop}
         className="navbar-brand-center"
@@ -31,14 +38,8 @@ const Navigation = () => {
         />
         <div className="think-oz-text">think oze</div>
       </Navbar.Brand>
-      <Navbar.Toggle
-        aria-controls="basic-navbar-nav"
-        onClick={() => setExpanded(expanded ? false : "expanded")} // Zmiana stanu po kliknięciu
-        className="navbar-toggler-custom"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </Navbar.Toggle>
-      <Navbar.Collapse id="basic-navbar-nav">
+
+      <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse-custom">
         <Nav className="ml-auto">
           <Nav.Link href="#products" style={{ color: "#E0E0E0" }} onClick={() => setExpanded(false)}>
             Produkty
