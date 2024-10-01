@@ -125,7 +125,7 @@ body, html {
 .nav-divider {
   width: 1px;
   height: 30px;
-  background-color: #707070;
+  background-color: #0a657c;
   margin: auto 15px;
 }
 
@@ -138,7 +138,7 @@ body, html {
 }
 
 .nav-link-custom:hover {
-  color: #ffffff !important; /* Kolor czcionki po najechaniu */
+  color: #0a657c !important; /* Kolor czcionki po najechaniu */
   background-color: #063e4d; /* Tło przy najechaniu */
 }
 

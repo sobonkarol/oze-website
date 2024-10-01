@@ -642,4 +642,18 @@ body {
     padding: 20px;
     border-radius: 10px;
   }
+  .text-with-border {
+    color: white; /* Kolor wypełnienia tekstu */
+    -webkit-text-stroke: 10px black; /* Obramowanie tekstu */
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  @media (min-width: 768px) {
+    .text-with-border {
+      font-size: 5rem;
+    }
+  }
+
+  
 }

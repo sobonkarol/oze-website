@@ -1,0 +1,18 @@
+.text-with-border {
+    color: white; /* Kolor tekstu */
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+  /* Nowa klasa dla przezroczystego tła */
+  .bg-overlay {
+    background-color: rgba(0, 0, 0, 0.1); /* Czarny kolor z 60% przezroczystością */
+    border-radius: 8px; /* Zaokrąglone rogi */
+  }
+  
+  @media (min-width: 768px) {
+    .text-with-border {
+      font-size: 5rem; /* Większy rozmiar czcionki na większych ekranach */
+    }
+  }
+  
