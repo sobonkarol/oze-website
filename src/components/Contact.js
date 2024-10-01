@@ -111,7 +111,7 @@ const Contact = () => {
           </Col>
           <Col md={5} className="contact-info">
             <div className="text-center"> {/* Center the contact info */}
-              <p><strong>Adres:</strong> ul. Przykładowa 123, 00-000 Miasto</p>
+              <p><strong>Adres:</strong> ul. Poniatowskiego 6 05-090 Raszyn</p>
               <p><strong>Telefon:</strong> +48 123 456 789</p>
               <p><strong>Email:</strong> kontakt@przyklad.pl</p>
               <p><strong>Godziny otwarcia:</strong> Pon-Pt 9:00 - 17:00</p>

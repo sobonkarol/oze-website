@@ -15,8 +15,78 @@ body {
 /* Stylizacja obrazu w nagłówku */
 .header-image {
   width: 100%;
-  height: auto;
+  height: 600px; /* Stała wysokość dla obrazów w Carousel */
   object-fit: cover;
+  object-position: center; /* Wyśrodkowanie obrazu */
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    height: 300px; /* Zmniejszona wysokość dla tabletów */
+  }
+}
+
+@media (max-width: 576px) {
+  .header-image {
+    height: 200px; /* Zmniejszona wysokość dla telefonów */
+  }
+}
+
+/* Stylizacja Carousel */
+.carousel-item {
+  height: 600px; /* Stała wysokość pozycji Carousel */
+}
+
+.carousel-item img {
+  height: 100%; /* Pełna wysokość dla obrazów */
+}
+
+.carousel-caption-custom {
+  background: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-caption-custom h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.carousel-caption-custom p {
+  font-size: 1rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 300px; /* Zmniejszona wysokość pozycji Carousel */
+  }
+
+  .carousel-caption-custom h3 {
+    font-size: 1.3rem;
+  }
+
+  .carousel-caption-custom p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+    height: 200px; /* Zmniejszona wysokość pozycji Carousel */
+  }
+
+  .carousel-caption-custom h3 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption-custom p {
+    font-size: 0.8rem;
+  }
 }
 
 /* Stylizacja Navbar */
@@ -30,7 +100,7 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Rozdzielenie logo i menu */
+  justify-content: space-between;
 }
 
 .navbar-custom .navbar-brand {
@@ -39,7 +109,7 @@ body {
 }
 
 .navbar-custom .navbar-logo {
-  max-width: 150px; /* Ograniczenie maksymalnej szerokości logo */
+  max-width: 150px;
   height: auto;
   transition: max-width 0.3s ease;
 }
@@ -83,21 +153,17 @@ body {
   margin: auto 15px;
 }
 
-.navbar-custom .nav-divider {
-  display: block; /* Pokaż dzielniki na większych ekranach */
-}
-
 @media (max-width: 992px) {
   .navbar-custom {
-    padding: 10px 10px; /* Zmniejszenie paddingu na średnich ekranach */
+    padding: 10px 10px;
   }
 
   .navbar-custom .navbar-logo {
-    max-width: 120px; /* Zmniejszenie logo na średnich ekranach */
+    max-width: 120px;
   }
 
   .navbar-custom .navbar-collapse {
-    justify-content: center; /* Wyśrodkowanie menu */
+    justify-content: center;
   }
 
   .navbar-custom .nav-link {
@@ -112,13 +178,13 @@ body {
 
 @media (max-width: 768px) {
   .navbar-custom {
-    flex-direction: column; /* Kolumnowy układ nawigacji */
+    flex-direction: column;
     height: auto;
     padding: 10px;
   }
 
   .navbar-custom .navbar-nav {
-    flex-direction: column; /* Układ kolumnowy menu */
+    flex-direction: column;
     text-align: center;
   }
 
@@ -128,7 +194,7 @@ body {
   }
 
   .nav-divider {
-    display: none; /* Ukryj dzielniki na mniejszych ekranach */
+    display: none;
   }
 }
 
@@ -147,12 +213,12 @@ body {
     font-size: 0.8rem;
   }
 
-  .navbar-custom .navbar-collapse {
-    justify-content: center;
+  .navbar-custom .navbar-logo {
+    max-width: 100px;
   }
 
-  .navbar-custom .navbar-logo {
-    max-width: 100px; /* Zmniejszenie logo przy małych ekranach */
+  .navbar-custom .navbar-collapse {
+    justify-content: center;
   }
 }
 
@@ -244,6 +310,12 @@ body {
   .card {
     flex: 1 1 100%;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
   }
 }
 
@@ -337,33 +409,6 @@ body {
 
 .footer-section a:hover {
   text-decoration: underline;
-}
-
-/* Stylizacja Carousel Caption */
-.carousel-caption-custom {
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  backdrop-filter: blur(5px);
-}
-
-.carousel-caption-custom h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.carousel-caption-custom p {
-  font-size: 1rem;
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
-/* Dodanie cienia tekstu */
-.carousel-caption-custom h3,
-.carousel-caption-custom p {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 /* Dodanie większych odstępów między elementami w sekcjach */
@@ -546,16 +591,16 @@ body {
 
   .card {
     display: flex;
-    flex-direction: column; /* Ustawienie kolumnowego układu */
-    justify-content: center; /* Wyśrodkowanie w pionie */
-    align-items: center; /* Wyśrodkowanie w poziomie */
-    text-align: center; /* Wyśrodkowanie tekstu */
-    white-space: normal; /* Upewnienie się, że tekst jest wyświetlany normalnie */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
   }
   
   .card p {
-    writing-mode: horizontal-tb; /* Ustawienie normalnego trybu pisania */
-    text-align: center; /* Wyśrodkowanie tekstu */
+    writing-mode: horizontal-tb;
+    text-align: center;
   }
   
   .card h3 {
@@ -570,9 +615,17 @@ body {
     font-size: 0.9rem;
   }
 
+  .carousel-item {
+    height: 550px; /* Stała wysokość pozycji Carousel */
+  }
+  
   .carousel-item img {
-    max-height: 550px; /* Ustaw maksymalną wysokość dla obrazów */
-    object-fit: cover; /* Dopasowanie obrazu, aby wypełniał kontener */
-    width: 100%; /* Ustaw szerokość na 100% */
-  }  
+    height: 100%; /* Pełna wysokość dla obrazu */
+  }
+  
+  .carousel-caption-custom {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
 }
