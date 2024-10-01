@@ -25,7 +25,6 @@ const Products = () => {
     <section className="products-section" id="products-section">
       <div className="section-content">
         {/* Dodanie klasy "product-header" do nagłówka h2 */}
-        <h2 className="text-center mb-5 product-header">Dostępne produkty</h2>
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>
