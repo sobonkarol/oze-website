@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaSolarPanel, FaTools, FaShippingFast, FaHandsHelping, FaHeadset } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 
 const Services = () => (
   <section className="services-section">

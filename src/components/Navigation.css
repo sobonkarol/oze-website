@@ -1,8 +1,145 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+/* Ogólne ustawienia */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.think-oz-text {
-  color: #FFFFFF; /* Change text color to white */
-  font-size: 28px; /* Increase the font size */
-  font-family: 'Nunito', sans-serif;
-  margin-top: 10px;
+/* Stylizacja Navbar */
+.navbar-custom {
+  background-color: #333;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-custom .navbar-brand-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-custom .navbar-logo {
+  max-width: 150px;
+  height: auto;
+  transition: max-width 0.3s ease;
+}
+
+/* Stylizacja dla logo w navbar */
+.navbar-custom .think-oz-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin-left: 15px;
+}
+
+.navbar-custom .navbar-toggler-custom {
+  border: none;
+  background-color: transparent;
+}
+
+.navbar-toggler-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-custom .navbar-collapse {
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.navbar-custom .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nav-link {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #b0b0b0;
+  background-color: rgba(176, 176, 176, 0.1);
+  border-radius: 5px;
+}
+
+/* Stylizacja separatora menu */
+.nav-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #707070;
+  margin: auto 15px;
+}
+
+/* Zmiany dla hamburger menu na mniejszych ekranach */
+@media (max-width: 992px) {
+  .navbar-custom {
+    padding: 10px 10px;
+  }
+
+  .navbar-custom .navbar-logo {
+    max-width: 120px;
+  }
+
+  .navbar-custom .navbar-collapse {
+    justify-content: center;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .nav-divider {
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-custom {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-custom .navbar-logo {
+    max-width: 100px;
+    margin: 0 auto 15px auto;
+  }
+
+  .navbar-custom .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-custom .nav-link {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  .nav-divider {
+    display: none; /* Ukryj dzielniki na mniejszych ekranach */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-custom {
+    height: auto;
+    padding: 10px;
+  }
+
+  .navbar-custom .nav-link {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+
+  .navbar-custom .navbar-logo {
+    max-width: 80px;
+  }
+
+  .navbar-custom .navbar-collapse {
+    justify-content: center;
+  }
 }
