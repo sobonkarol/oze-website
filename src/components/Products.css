@@ -1,75 +1,124 @@
-/* Stylizacja kontenera dla kart */
-.row.g-4 {
-    display: flex;
-    flex-wrap: wrap; /* Pozwól kartom zawijać się w nowy rząd */
-    justify-content: center; /* Wyśrodkuj karty w kontenerze */
-    gap: 20px; /* Odstępy między kartami */
+.products-section {
+  padding: 60px 0;
+  background-color: #215537;
+}
+
+.section-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  padding: 20px;
+  width: calc(25% - 30px);
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Flexbox ustawiający zawartość w kolumny */
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #134015;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Wypełnia wolną przestrzeń, by przyciski były wyrównane */
+}
+
+/* Styl dla hiperłącza "Karta techniczna" */
+.product-link {
+  color: #609950; /* Ustawienie koloru linku */
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Dodanie przejścia */
+  border-bottom: 2px solid transparent; /* Przejście z przezroczystej linii */
+}
+
+.product-link:hover {
+  color: #3b693e; /* Ciemniejszy odcień przy najechaniu */
+  border-bottom: 2px solid #3b693e; /* Podkreślenie przy najechaniu */
+}
+
+/* Styl dla przycisku */
+.btn {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger {
+  background-color: #1b9652;
+  color: #fff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a43d46;
+}
+
+/* Dostosowanie do mniejszych ekranów */
+@media (max-width: 1200px) {
+  .card {
+    width: calc(33.33% - 20px);
   }
-  
-  /* Ogólne stylizacje dla kart w sekcji Produkty */
-  .card-custom {
-    background: #333; /* Tło karty */
-    border-radius: 10px; /* Zaokrąglone rogi */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Cień karty */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Przejścia dla animacji */
-    color: #e0e0e0; /* Kolor tekstu */
-    margin-bottom: 20px; /* Odstęp między kartami w pionie */
-    flex: 1 1 calc(33.33% - 40px); /* Stała szerokość kart na większych ekranach */
-    max-width: calc(33.33% - 40px); /* Stała szerokość kart */
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: calc(50% - 20px);
   }
-  
-  .card-custom:hover {
-    transform: translateY(-10px); /* Przesunięcie karty do góry przy najechaniu */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Wzmocniony cień przy najechaniu */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
   }
-  
-  /* Stylizacja obrazu w kartach */
+
   .card-img-top {
-    height: 200px; /* Ustalona wysokość obrazu */
-    object-fit: contain; /* Dopasowanie obrazu do kontenera */
-    border-radius: 10px; /* Zaokrąglone rogi */
+    height: 150px;
   }
-  
-  /* Stylizacja tytułu i tekstu karty */
-  .card-title {
-    font-size: 1.5rem; /* Większy rozmiar tytułu */
-    color: #fff; /* Kolor tytułu */
-    margin-bottom: 15px;
-  }
-  
-  .card-text {
-    font-size: 1.1rem; /* Rozmiar czcionki dla treści karty */
-    color: #e0e0e0; /* Kolor tekstu */
-    margin-bottom: 20px;
-  }
-  
-  /* Stylizacja przycisku karty */
-  .card .btn-danger {
-    background-color: #ff6347; /* Kolor przycisku */
-    border: none; /* Bez obramowania */
-    transition: background-color 0.3s ease; /* Płynna zmiana tła */
-  }
-  
-  .card .btn-danger:hover {
-    background-color: #ff4500; /* Kolor przycisku po najechaniu */
-  }
-  
-  /* Responsywność dla kart */
-  @media (max-width: 1200px) {
-    .card-custom {
-      flex: 1 1 calc(50% - 40px); /* Karty zajmują 50% szerokości na średnich ekranach */
-      max-width: calc(50% - 40px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .card-custom {
-      flex: 1 1 calc(100% - 40px); /* Karty zajmują całą szerokość na wąskich ekranach */
-      max-width: calc(100% - 40px);
-    }
-  
-    .card-img-top {
-      height: 150px; /* Zmniejszenie wysokości obrazu */
-    }
-  }  
+}

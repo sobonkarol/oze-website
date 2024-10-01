@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import './Products.css'; // Import stylów dla produktów
+import { ProductContext } from './ProductContext'; // Import kontekstu
+import './Products.css'; // Import stylów
 
 const Products = () => {
+  const { setSelectedProduct } = useContext(ProductContext);
   const [products, setProducts] = useState([]);
 
   // Pobieranie produktów z serwera
@@ -12,7 +14,7 @@ const Products = () => {
         const response = await axios.get('https://thinkoze-admin.onrender.com/products');
         setProducts(response.data);
       } catch (error) {
-        console.error('Error fetching products:', error);
+        console.error('Błąd podczas pobierania produktów:', error);
       }
     };
 
@@ -26,20 +28,32 @@ const Products = () => {
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>
-              {/* Dodanie obrazu na górze karty */}
+              {/* Cena na samej górze karty */}
+              <p className="product-price"><strong>Cena:</strong> {product.price} zł + VAT</p>
+              {/* Obraz produktu */}
               <img
                 src={`https://thinkoze-admin.onrender.com${product.imageUrl}`}
                 alt={product.name}
                 className="card-img-top"
               />
-              <div></div>
-              <p><strong>Cena:</strong> {product.price} zł + VAT</p>
-              <h3>{product.name}</h3>
+              {/* Nazwa produktu */}
+              <h3 className="card-title">{product.name}</h3>
+              {/* Opis produktu */}
+              <p className="card-text">{product.description}</p>
+              {/* Przycisk "Kup teraz" */}
+              <a
+                href="#contact"
+                className="btn btn-danger mb-2"
+                onClick={() => setSelectedProduct(product.name)}
+              >
+                Kup teraz
+              </a>
+              {/* Hiperłącze "Karta techniczna" */}
               <a
                 href={`https://thinkoze-admin.onrender.com${product.pdfUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary"
+                className="product-link" // Dodanie klasy CSS dla stylizacji hiperłącza
               >
                 Karta techniczna
               </a>

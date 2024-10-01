@@ -55,14 +55,7 @@ const Navigation = () => {
             className={`menu-link ${activeLink === "products" ? "active" : ""}`}
             onClick={() => handleLinkClick("products")}
           >
-            Produkty
-          </Nav.Link>
-          <Nav.Link
-            href="#about"
-            className={`menu-link ${activeLink === "about" ? "active" : ""}`}
-            onClick={() => handleLinkClick("about")}
-          >
-            O nas
+            Fotowoltaika
           </Nav.Link>
           <Nav.Link
             href="#services"
@@ -77,6 +70,13 @@ const Navigation = () => {
             onClick={() => handleLinkClick("why-us")}
           >
             Dlaczego my
+          </Nav.Link>
+          <Nav.Link
+            href="#about"
+            className={`menu-link ${activeLink === "about" ? "active" : ""}`}
+            onClick={() => handleLinkClick("about")}
+          >
+            O nas
           </Nav.Link>
           <Nav.Link
             href="#contact"
@@ -98,15 +98,7 @@ const Navigation = () => {
             className={`nav-link-custom ${activeLink === "products" ? "active" : ""}`}
             onClick={() => handleLinkClick("products")}
           >
-            Produkty
-          </Nav.Link>
-          <div className="nav-divider"></div>
-          <Nav.Link
-            href="#about"
-            className={`nav-link-custom ${activeLink === "about" ? "active" : ""}`}
-            onClick={() => handleLinkClick("about")}
-          >
-            O nas
+            Fotowoltaika
           </Nav.Link>
           <div className="nav-divider"></div>
           <Nav.Link
@@ -123,6 +115,14 @@ const Navigation = () => {
             onClick={() => handleLinkClick("why-us")}
           >
             Dlaczego my
+          </Nav.Link>
+          <div className="nav-divider"></div>
+          <Nav.Link
+            href="#about"
+            className={`nav-link-custom ${activeLink === "about" ? "active" : ""}`}
+            onClick={() => handleLinkClick("about")}
+          >
+            O nas
           </Nav.Link>
           <div className="nav-divider"></div>
           <Nav.Link

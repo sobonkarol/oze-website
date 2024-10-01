@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 import emailjs from 'emailjs-com';
-import './Contact.css'; // Import CSS file for styling
+import { ProductContext } from './ProductContext'; // Import kontekstu produktu
+import './Contact.css'; // Import stylów kontaktu
 
 const Contact = () => {
+  const { selectedProduct } = useContext(ProductContext); // Pobierz wybrany produkt
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: selectedProduct ? `Zamówienie na: ${selectedProduct}` : '',
   });
 
   const [alertMessage, setAlertMessage] = useState('');
   const [alertVariant, setAlertVariant] = useState('');
+
+  useEffect(() => {
+    // Zaktualizuj wiadomość w formularzu po zmianie wybranego produktu
+    if (selectedProduct) {
+      setFormData((prevData) => ({
+        ...prevData,
+        message: `Zamówienie na: ${selectedProduct}`,
+      }));
+    }
+  }, [selectedProduct]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +33,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Ensure all fields are filled out
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       setAlertMessage('Proszę wypełnić wszystkie pola.');
       setAlertVariant('danger');
@@ -110,7 +121,7 @@ const Contact = () => {
             </Form>
           </Col>
           <Col md={5} className="contact-info">
-            <div className="text-center"> {/* Center the contact info */}
+            <div className="text-center">
               <p><strong>Adres:</strong> ul. Poniatowskiego 6, 05-090 Raszyn</p>
               <p><strong>Telefon:</strong> +48 694 413 377</p>
               <p><strong>Godziny otwarcia:</strong> Pon-Pt 8:00 - 16:00</p>
