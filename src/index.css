@@ -30,6 +30,11 @@ body {
   .header-image {
     height: 100px; /* Zmniejszona wysokość dla telefonów */
   }
+
+  .slogan-test {
+    display: none;
+  }
+  
 }
 
 /* Stylizacja Carousel */
@@ -62,9 +67,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .carousel-item {
-    height: auto; /* Zmniejszona wysokość pozycji Carousel */
-  }
 
   .carousel-caption-custom h3 {
     font-size: 1.3rem;
@@ -76,7 +78,12 @@ body {
 }
 
 @media (max-width: 576px) {
+  .text-with-border{
+    height: 80px;
+    font-size: 20px;
+  }
   .carousel-item {
+    height: auto;
   }
 
   .carousel-caption-custom h3 {
@@ -633,5 +640,9 @@ body {
 @media (min-width: 768px) {
   .text-with-border {
     font-size: 5rem;
+  }
+
+  .slogan-text {
+    display: none;
   }
 }
