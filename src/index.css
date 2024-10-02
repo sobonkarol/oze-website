@@ -8,7 +8,7 @@ body, html {
 body {
   font-family: 'Lato', sans-serif;
   background-color: #0C708A;
-  color: #e0e0e0;
+  color: #ffffff !important;
   line-height: 1.6;
 }
 
@@ -400,7 +400,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  color: #e0e0e0;
+  color: #ffffff;
   margin-bottom: 40px;
   position: relative;
 }
@@ -448,7 +448,7 @@ body {
 .contact-section {
   padding: 60px 15px;
   color: rgb(255, 255, 255);
-  background-color: #ffffff;
+  background-color: #0C708A;
   border-top: 5px solid #444;
   display: flex;
   flex-direction: column;

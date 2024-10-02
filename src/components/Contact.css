@@ -1,21 +1,72 @@
-.contact-form .form-title {
-    font-size: 1.75rem; /* Zmiana rozmiaru czcionki */
+/* Stylizacja zdjęć członków zespołu */
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; /* Dodatkowy margines między członkami zespołu */
+}
+
+.team-photo {
+  width: 150px; /* Szerokość zdjęcia */
+  height: 150px; /* Wysokość zdjęcia */
+  border-radius: 50%; /* Zaokrąglenie zdjęcia */
+  object-fit: cover; /* Dopasowanie zdjęcia, aby wypełniało cały kontener */
+  margin-bottom: 15px; /* Margines poniżej zdjęcia */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Dodanie delikatnego cienia */
+}
+
+/* Stylizacja tekstu pod zdjęciami członków zespołu */
+.team-member h3 {
+  font-size: 1.25rem; /* Rozmiar czcionki dla imienia i nazwiska */
+  margin-bottom: 5px; /* Margines poniżej imienia */
+}
+
+.team-member p {
+  font-size: 1rem; /* Rozmiar czcionki dla specjalności i numeru telefonu */
+  margin: 0; /* Usunięcie marginesu, aby tekst był bardziej zwarty */
+}
+
+/* Ustawienia sekcji zespołu */
+.about-team {
+  gap: 50px;
+}
+
+/* Dodatkowa stylizacja sekcji "O nas" */
+.about-section {
+  padding: 40px px; /* Odstępy wewnętrzne sekcji */
+}
+
+.about-content {
+  max-width: 900px; /* Maksymalna szerokość sekcji */
+  margin: 0 auto; /* Wyśrodkowanie sekcji */
+  text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.about-text {
+  text-align: center; /* Wyśrodkowanie tekstu */
+  margin-top: 20px; /* Dodatkowy odstęp nad opisem */
+  line-height: 1.6; /* Odstęp między liniami tekstu */
+}
+
+/* Stylizacja nagłówków w sekcji */
+.about-section h2 {
+  font-size: 2rem; /* Rozmiar czcionki nagłówka */
+  font-weight: bold; /* Pogrubienie czcionki */
+  margin-bottom: 40px; /* Odstęp poniżej nagłówka */
+}
+
+/* Responsywność - dostosowanie układu dla mniejszych ekranów */
+@media (max-width: 768px) {
+  .about-team {
+    flex-direction: column; /* Ustawienie członków zespołu w kolumnie */
+    align-items: center; /* Wyśrodkowanie w kolumnie */
   }
-  
-  .contact-info .info-title {
-    font-size: 1.75rem; /* Zmiana rozmiaru czcionki */
+
+  .team-member {
+    margin-bottom: 30px; /* Margines między członkami zespołu */
   }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  .about-text {
+    text-align: center; /* Wyśrodkowanie tekstu dla mniejszych ekranów */
   }
-  
-  .contact-info p {
-    margin-bottom: 10px; /* Opcjonalnie zmniejsz margines między liniami tekstu */
-  }
-  
-  .contact-form .text-center.mt-4 {
-    margin-top: 30px; /* Zwiększenie odstępu między formularzem a przyciskiem */
-  }  
+}

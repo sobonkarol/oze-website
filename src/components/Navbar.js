@@ -109,16 +109,6 @@ const Navigation = () => {
               </Nav.Link>
               <div className="nav-divider"></div>
               <Nav.Link
-                href="#contact"
-                className={`nav-link-custom ${
-                  activeLink === "contact" ? "active" : ""
-                }`}
-                onClick={() => handleLinkClick("contact")}
-              >
-                Kontakt
-              </Nav.Link>
-              <div className="nav-divider"></div>
-              <Nav.Link
                 href="#about"
                 className={`nav-link-custom ${
                   activeLink === "about" ? "active" : ""
@@ -126,6 +116,16 @@ const Navigation = () => {
                 onClick={() => handleLinkClick("about")}
               >
                 O nas
+              </Nav.Link>
+              <div className="nav-divider"></div>
+              <Nav.Link
+                href="#contact"
+                className={`nav-link-custom ${
+                  activeLink === "contact" ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick("contact")}
+              >
+                Kontakt
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

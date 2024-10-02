@@ -21,26 +21,32 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+  // Funkcja do podzielenia nazwy produktu na główną część i nawiasy
+  const formatProductName = (name) => {
+    const parts = name.match(/([^(]+)(\(.+\))?/); // Rozdziela nazwę na część główną i część w nawiasach
+    return parts ? { mainName: parts[1], subName: parts[2] } : { mainName: name, subName: '' };
+  };
+
   return (
     <section className="products-section" id="products-section">
       <div className="section-content">
-        {/* Dodanie klasy "product-header" do nagłówka h2 */}
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>
-              {/* Cena na samej górze karty */}
               <p className="product-price"><strong>Cena:</strong> {product.price} zł + VAT</p>
-              {/* Obraz produktu */}
               <img
                 src={`https://thinkoze-admin.onrender.com${product.imageUrl}`}
                 alt={product.name}
                 className="card-img-top"
               />
-              {/* Nazwa produktu */}
-              <h3 className="card-title">{product.name}</h3>
-              {/* Opis produktu */}
+              <h3 className="card-title">
+                {/* Główna część nazwy */}
+                {formatProductName(product.name).mainName}
+                <br />
+                {/* Część w nawiasach, mniejszy tekst */}
+                <span className="product-subtitle">{formatProductName(product.name).subName}</span>
+              </h3>
               <p className="card-text">{product.description}</p>
-              {/* Przycisk "Kup teraz" */}
               <a
                 href="#contact"
                 className="btn btn-danger mb-2"
@@ -48,12 +54,11 @@ const Products = () => {
               >
                 Kup teraz
               </a>
-              {/* Hiperłącze "Karta techniczna" */}
               <a
                 href={`https://thinkoze-admin.onrender.com${product.pdfUrl}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="product-link" // Dodanie klasy CSS dla stylizacji hiperłącza
+                className="product-link"
               >
                 Karta techniczna
               </a>

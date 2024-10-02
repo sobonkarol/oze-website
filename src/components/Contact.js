@@ -65,7 +65,8 @@ const Contact = () => {
           </Alert>
         )}
         <Row className="justify-content-center">
-          <Col md={5} className="contact-form">
+          {/* Kolumna z formularzem */}
+          <Col md={6} className="contact-form">
             <h3 className="text-center mb-4 form-title">Wyślij nam wiadomość</h3>
             <Form onSubmit={handleSubmit}>
               <Form.Group controlId="formName">
@@ -120,7 +121,20 @@ const Contact = () => {
               </div>
             </Form>
           </Col>
-          <Col md={5} className="contact-info">
+          {/* Kolumna z mapą i danymi kontaktowymi */}
+          <Col md={6} className="contact-info">
+            <div className="map-container mb-4">
+              {/* Mapa Google */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2442.0032907490845!2d20.92426331580246!3d52.15240217974652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471939887e7dc3c9%3A0x4fb4e1849eab31b5!2sPoniatowskiego%206%2C%2005-090%20Raszyn%2C%20Poland!5e0!3m2!1sen!2sus!4v1633940070290!5m2!1sen!2sus"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                title="Google Map"
+              ></iframe>
+            </div>
             <div className="text-center">
               <p><strong>Adres:</strong> ul. Poniatowskiego 6, 05-090 Raszyn</p>
               <p><strong>Telefon:</strong> +48 694 413 377</p>

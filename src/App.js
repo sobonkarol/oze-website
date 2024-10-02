@@ -22,11 +22,11 @@ function App() {
       <section id="dlaczegoMy">
         <DlaczegoMy />
       </section>
-      <section id="contact">
-        <Contact />
-      </section>
       <section id="about">
         <About />
+      </section>
+      <section id="contact">
+        <Contact />
       </section>
       <Footer />
       <ScrollToTopButton /> {/* Dodanie przycisku nawigacji do góry */}

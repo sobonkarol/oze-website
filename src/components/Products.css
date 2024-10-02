@@ -37,23 +37,28 @@
 
 .card-img-top {
   width: 100%;
-  height: 150px;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
 .product-price {
-  font-size: 1.6rem;
+  font-size: 1.3rem !important;
   font-weight: bold;
   color: #134015;
   margin-bottom: 15px;
 }
 
 .card-title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 1.25rem; /* Rozmiar czcionki dla głównej części nazwy */
+}
+
+.product-subtitle {
+  font-size: 0.85rem; /* Mniejszy rozmiar czcionki dla części w nawiasach */
+  color: #666; /* Kolor czcionki */
+  display: block; /* Nowa linia */
+  margin-top: 0.25rem; /* Mały odstęp od głównej części nazwy */
 }
 
 .card-text {
