@@ -246,6 +246,10 @@ body, html {
   .menu-items .menu-link {
     font-size: 18px;
   }
+
+  .navbar-toggler-custom {
+    display: none; /* Ukrywa ikonkę hamburger menu */
+  }
 }
 
 @media (max-width: 576px) {
@@ -255,6 +259,10 @@ body, html {
 
   .close-btn {
     font-size: 28px;
+  }
+
+  .navbar-toggler-custom {
+    display: none; /* Ukrywa ikonkę hamburger menu */
   }
 }
 
