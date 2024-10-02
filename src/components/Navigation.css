@@ -1,47 +1,79 @@
-/* Podstawowe ustawienia */
 body, html {
   margin: 0;
   padding: 0;
+  margin-top: 50px; /* Dodano, aby treść nie była zasłonięta przez navbar */
 }
 
 /* Stylizacja navbar */
 .navbar-custom {
-  position: relative; /* Dodano, aby elementy absolutne były pozycjonowane względem navbara */
+  position: fixed; /* Zmieniono z relative na fixed */
+  top: 0;
+  left: 0;
+  width: 100%; /* Pełna szerokość */
   background-color: #ffffff;
-  height: 120px;
+  height: 100px; /* Zmniejszona wysokość z 120px */
   display: flex;
   align-items: center;
   justify-content: center; /* Wycentrowanie elementów wewnątrz */
   padding: 0 30px;
   transition: all 0.3s ease;
+  z-index: 1000; /* Dodano, aby navbar był na wierzchu */
 }
 
 /* Stylizacja logo */
 .navbar-brand-center {
-  position: absolute; /* Aby umieścić logo po lewej stronie */
+  position: absolute; /* Pozostawiono, aby umieścić logo po lewej stronie */
   left: 30px;
   display: flex;
   align-items: center;
 }
 
 .navbar-logo {
-  height: 60px;
+  height: 40px; /* Zmniejszono wysokość logo */
   width: auto;
 }
 
 .think-oz-text {
   color: #063e4d;
-  font-size: 24px;
+  font-size: 20px; /* Opcjonalnie zmniejsz czcionkę */
   margin-left: 10px;
 }
 
-/* Hamburger menu styling */
+/* Hamburger menu */
 .navbar-toggler-custom {
-  position: absolute; /* Aby umieścić przycisk menu po prawej stronie */
+  position: absolute; /* Pozostawiono, aby umieścić przycisk menu po prawej stronie */
   right: 30px;
   background: none;
   border: none;
   cursor: pointer;
+}
+
+/* Reszta kodu pozostaje bez zmian, chyba że wymaga dalszych dostosowań */
+
+/* Upewnij się, że z-index pełnoekranowego menu jest niższy niż navbara */
+.full-screen-menu {
+  z-index: 999; /* Zapewnia, że menu jest pod navbar */
+}
+
+/* Dostosowanie dla responsywności */
+@media (max-width: 768px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    margin-top: 115px; /* Dodano, aby treść nie była zasłonięta przez navbar */
+  }
+  .navbar-custom {
+    padding: 10px;
+    height: auto;
+  }
+
+  .navbar-brand-center,
+  .navbar-contact-info,
+  .navbar-toggler-custom {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
 }
 
 .toggler-icon {
@@ -191,7 +223,7 @@ body, html {
 /* Responsywność */
 @media (max-width: 768px) {
   .navbar-custom {
-    padding: 10px;
+    padding: auto;
     height: auto; /* Pozwoli na dynamiczną wysokość */
   }
 
@@ -208,7 +240,7 @@ body, html {
 
   .navbar-toggler-custom {
     position: static; /* Resetuje pozycjonowanie */
-    margin-top: 10px; /* Dodaje odstęp od góry */
+    margin-top: 0px; /* Dodaje odstęp od góry */
   }
 
   .menu-items .menu-link {

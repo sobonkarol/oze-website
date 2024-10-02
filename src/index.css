@@ -110,7 +110,7 @@ body {
 
 .navbar-custom .navbar-logo {
   max-width: 150px;
-  height: auto;
+  height: 65px;
   transition: max-width 0.3s ease;
 }
 
@@ -329,6 +329,15 @@ body {
     align-items: center;
     text-align: center;
     white-space: normal;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    writing-mode: horizontal-tb;
+    text-align: center;
   }
 }
 
@@ -584,11 +593,12 @@ body {
 
 @media (max-width: 600px) {
   .navbar-custom {
-    height: 60px;
+    height: auto;
+    padding: 10px;
   }
 
   .navbar-custom .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 5px 10px;
   }
 
@@ -603,57 +613,26 @@ body {
     font-size: 1.5rem;
   }
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    white-space: normal;
-  }
-  
-  .card p {
-    writing-mode: horizontal-tb;
-    text-align: center;
-  }
-  
   .card h3 {
     font-size: 1.2rem;
   }
 
-  .carousel-caption-custom h3 {
-    font-size: 1.2rem;
+  .card p {
+    writing-mode: horizontal-tb;
+    text-align: center;
   }
+}
 
-  .carousel-caption-custom p {
-    font-size: 0.9rem;
-  }
+/* Stylizacja tekstu z obramowaniem */
+.text-with-border {
+  color: white; /* Kolor wypełnienia tekstu */
+  -webkit-text-stroke: 0.00em black; /* Obramowanie skalujące się z rozmiarem czcionki */
+  font-weight: bold;
+  font-size: 3rem;
+}
 
-  .carousel-item {
-    height: 550px; /* Stała wysokość pozycji Carousel */
-  }
-  
-  .carousel-item img {
-    height: 100%; /* Pełna wysokość dla obrazu */
-  }
-  
-  .carousel-caption-custom {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-  }
+@media (min-width: 768px) {
   .text-with-border {
-    color: white; /* Kolor wypełnienia tekstu */
-    -webkit-text-stroke: 10px black; /* Obramowanie tekstu */
-    font-weight: bold;
-    font-size: 3rem;
+    font-size: 5rem;
   }
-  
-  @media (min-width: 768px) {
-    .text-with-border {
-      font-size: 5rem;
-    }
-  }
-
-  
 }

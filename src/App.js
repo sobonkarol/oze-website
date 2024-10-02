@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 import Navigation from './components/Navbar';
 import Header from './components/Header';
@@ -6,14 +7,13 @@ import DlaczegoMy from './components/DlaczegoMy';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { ProductProvider } from './components/ProductContext'; // Import kontekstu produktu
+import ScrollToTopButton from './components/ScrollToTopButton'; // Import nowego komponentu
+import { ProductProvider } from './components/ProductContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return (
     <ProductProvider>
-      {/* Wszystkie komponenty mają dostęp do kontekstu produktu */}
       <Navigation />
       <Header />
       <section id="products">
@@ -29,6 +29,7 @@ function App() {
         <About />
       </section>
       <Footer />
+      <ScrollToTopButton /> {/* Dodanie przycisku nawigacji do góry */}
     </ProductProvider>
   );
 }
