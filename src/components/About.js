@@ -15,16 +15,16 @@ const About = () => (
           <img src={czlowiek1} alt="Patryk Soboń" className="team-photo" />
           <h3>Patryk Soboń</h3>
           <p><b>Specjalność</b></p>
-          <p>Telefon: +48 694 413 377</p>
-          <p>Email: sobon@thinkoze.pl</p>
+          <p>+48 694 413 377</p>
+          <p>sobon@thinkoze.pl</p>
         </div>
         <div className="team-member">
           {/* Zastąpienie ikony zdjęciem */}
           <img src={czlowiek2} alt="Patryk Kubiak" className="team-photo" />
           <h3>Patryk Kubiak</h3>
           <p><b>Specjalność</b></p>
-          <p>Telefon: +48 691 664 696</p>
-          <p>Email: kubiak@thinkoze.pl</p>
+          <p>+48 691 664 696</p>
+          <p>kubiak@thinkoze.pl</p>
         </div>
       </div>
 
