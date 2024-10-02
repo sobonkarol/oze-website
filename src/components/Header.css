@@ -15,4 +15,8 @@
       font-size: 5rem; /* Większy rozmiar czcionki na większych ekranach */
     }
   }
+
+  .header-video {
+    pointer-events: none !important;
+  }
   
