@@ -269,3 +269,63 @@ body, html {
 .collapse-hidden {
   display: none;
 }
+
+/* Stylizacje dla wrappera strony */
+.page-wrapper.blur {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Stylizacja dla nakładki ładowania */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+}
+
+/* Stylizacja ikony ładowania */
+.loading-icon {
+  font-size: 3rem;
+  color: #007bff;
+  animation: spin 1s linear infinite;
+}
+
+/* Animacja obracania */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dodanie stylów dla zmiany kursora */
+.clickable {
+  cursor: pointer;
+}
+
+/* Stylizacja dla logo i tekstu podczas najechania */
+.navbar-brand-center .clickable:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ustawienie rozmiaru i marginesu dla logo */
+.navbar-logo {
+  height: 50px;
+  margin-right: 0px;
+}
+
+/* Stylizacja dla rozmycia */
+.page-wrapper.blur {
+  filter: blur(5px);
+  transition: filter 0.5s ease-in-out;
+}
