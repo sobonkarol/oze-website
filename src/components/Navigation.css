@@ -59,8 +59,7 @@ body, html {
 @media (max-width: 768px) {
   body, html {
     margin: 0;
-    padding-top: 78px;
-    margin-top: px; /* Dodano, aby treść nie była zasłonięta przez navbar */
+    padding-top: 80px;/* Dodano, aby treść nie była zasłonięta przez navbar */
   }
   .navbar-custom {
     padding: auto;
