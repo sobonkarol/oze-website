@@ -1,30 +1,28 @@
-import React, { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import { ProductContext } from './ProductContext'; // Import kontekstu
-import './Products.css'; // Import stylów
+import React, { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import { ProductContext } from "./ProductContext";
+import "./Products.css";
 
 const Products = () => {
   const { setSelectedProduct } = useContext(ProductContext);
   const [products, setProducts] = useState([]);
 
-  // Pobieranie produktów z serwera
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://thinkoze-admin.onrender.com/products');
+        const response = await axios.get("https://thinkoze-admin.onrender.com/products");
         setProducts(response.data);
       } catch (error) {
-        console.error('Błąd podczas pobierania produktów:', error);
+        console.error("Błąd podczas pobierania produktów:", error);
       }
     };
 
     fetchProducts();
   }, []);
 
-  // Funkcja do podzielenia nazwy produktu na główną część i nawiasy
   const formatProductName = (name) => {
-    const parts = name.match(/([^(]+)(\(.+\))?/); // Rozdziela nazwę na część główną i część w nawiasach
-    return parts ? { mainName: parts[1], subName: parts[2] } : { mainName: name, subName: '' };
+    const parts = name.match(/([^(]+)(\(.+\))?/);
+    return parts ? { mainName: parts[1], subName: parts[2] } : { mainName: name, subName: "" };
   };
 
   return (
@@ -33,17 +31,26 @@ const Products = () => {
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>
-              <p className="product-price"><strong>Cena:</strong> {product.price} zł + VAT</p>
+              <p className="product-price">
+                <strong>Cena:</strong>{" "}
+                {product.discountPrice && product.basePrice && product.discountPrice !== product.basePrice ? (
+                  <>
+                    <span className="old-price">{product.basePrice} zł</span>
+                    <br />
+                    <span className="discount-price">{product.discountPrice} zł + VAT</span>
+                  </>
+                ) : (
+                  <>{product.price || product.discountPrice || product.basePrice} zł + VAT</>
+                )}
+              </p>
               <img
                 src={`https://thinkoze-admin.onrender.com${product.imageUrl}`}
                 alt={product.name}
                 className="card-img-top"
               />
               <h3 className="card-title">
-                {/* Główna część nazwy */}
                 {formatProductName(product.name).mainName}
                 <br />
-                {/* Część w nawiasach, mniejszy tekst */}
                 <span className="product-subtitle">{formatProductName(product.name).subName}</span>
               </h3>
               <p className="card-text">{product.description}</p>

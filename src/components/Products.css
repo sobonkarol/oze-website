@@ -117,6 +117,18 @@
   margin-bottom: 30px; /* Ustawienie odstępu od dolnej części nagłówka */
 }
 
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 1rem;
+}
+
+.discount-price {
+  color: #208b3d;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
 
 /* Dostosowanie do mniejszych ekranów */
 @media (max-width: 1200px) {
