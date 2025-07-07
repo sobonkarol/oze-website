@@ -1,49 +1,94 @@
-import React from 'react';
-import { FaBolt, FaCheckCircle, FaTools, FaHandsHelping } from 'react-icons/fa';
+import React, { useContext } from 'react';
+import { ProductContext } from './ProductContext';
+import './DlaczegoMy.css';
 
-const DlaczegoMy = () => (
-  <section className="why-us-section">
-    <div className="section-content">
-      <h2 className="text-center mb-5">Klimatyzacja</h2>
-      <div className="card-container">
-        
-        <div className="card">
-          <div className="card-icon">
-            <FaBolt size={48} color="#0C708A" />
+const DlaczegoMy = () => {
+  const { setSelectedProduct } = useContext(ProductContext);
+
+  const handleWycenaClick = () => {
+    setSelectedProduct('Wycena klimatyzacji');
+    window.location.hash = '#contact';
+  };
+
+  return (
+    <section className="why-us-section">
+      <div className="white-divider" />
+
+      <div className="container">
+        <h2 className="text-center mb-5">Dlaczego klimatyzacja i dlaczego my?</h2>
+
+        <div className="highlight-block mb-5">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <img src="/images/klimatyzacja-salon.jpg" alt="Klimatyzacja w salonie" className="why-image" />
+            </div>
+            <div className="col-md-6">
+              <h3>Komfort przez cały rok</h3>
+              <p>
+                Klimatyzacja to inwestycja, która znacząco poprawia komfort życia. Nowoczesne urządzenia nie tylko skutecznie chłodzą latem, ale także umożliwiają efektywne ogrzewanie zimą. Dzięki temu możesz cieszyć się przyjemną temperaturą w domu przez cały rok – bez względu na warunki pogodowe za oknem.
+              </p>
+              <p>
+                Urządzenia klimatyzacyjne wyposażone są w inteligentne systemy zarządzania, które pozwalają ustawiać harmonogramy pracy, sterować temperaturą zdalnie przez aplikację, a nawet dostosowywać pracę urządzenia do Twojego trybu życia.
+              </p>
+              <p>
+                Co więcej, nowoczesna klimatyzacja dba również o jakość powietrza. Wbudowane filtry usuwają pyłki, roztocza, kurz i bakterie – idealne rozwiązanie dla alergików i rodzin z dziećmi.
+              </p>
+              <p>
+                Dzięki niskiemu zużyciu energii i wysokiej wydajności, klimatyzacja to komfort, zdrowie i oszczędność w jednym.
+              </p>
+            </div>
           </div>
-          <h3>Nowoczesne Technologie</h3>
-          <p>Nasze klimatyzatory to połączenie innowacyjnych rozwiązań z energooszczędnością, aby zapewnić optymalne warunki w Twoim domu przez cały rok.</p>
         </div>
-        
-        <div className="card">
-          <div className="card-icon">
-            <FaCheckCircle size={48} color="#0C708A" />
+
+        <div className="highlight-block mb-5">
+          <div className="row align-items-center flex-md-row-reverse">
+            <div className="col-md-6">
+              <img src="/images/montaz-zespol.jpg" alt="Zespół montażowy" className="why-image" />
+            </div>
+            <div className="col-md-6">
+              <h3>Doświadczenie i precyzja</h3>
+              <p>
+                Od lat zajmujemy się projektowaniem i montażem systemów klimatyzacyjnych. Setki realizacji w domach, biurach, sklepach i lokalach usługowych to dowód zaufania klientów.
+              </p>
+              <p>
+                Nasz zespół to wykwalifikowani monterzy z certyfikatami F-gazowymi. Montaż przebiega sprawnie, czysto i zgodnie ze sztuką. Dbamy o estetykę i bezpieczeństwo instalacji.
+              </p>
+              <p>
+                Oferujemy bezpłatne doradztwo i pomoc w doborze odpowiedniego rozwiązania dopasowanego do Twoich potrzeb i budżetu.
+              </p>
+            </div>
           </div>
-          <h3>Bezkompromisowa Jakość</h3>
-          <p>Współpracujemy wyłącznie z renomowanymi markami, które gwarantują długotrwałe i bezawaryjne działanie. Nasze produkty zapewnią Ci spokój i komfort użytkowania na lata.</p>
         </div>
-        
-        <div className="card">
-          <div className="card-icon">
-            <FaHandsHelping size={48} color="#0C708A" />
+
+        <div className="highlight-block mb-5">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <img src="/images/klimatyzator-zblizenie.jpg" alt="Nowoczesny klimatyzator" className="why-image" />
+            </div>
+            <div className="col-md-6">
+              <h3>Najlepsze technologie</h3>
+              <p>
+                Współpracujemy z renomowanymi markami jak Daikin, LG, Gree, Mitsubishi. Oferujemy urządzenia split, multisplit, kanałowe oraz kasetonowe – zawsze dopasowane do wnętrza.
+              </p>
+              <p>
+                Nasze klimatyzacje są energooszczędne, ciche, trwałe i wyposażone w nowoczesne funkcje: Wi-Fi, harmonogramy, czujniki ruchu czy tryby oszczędzania energii.
+              </p>
+              <p>
+                Gwarantujemy, że każde urządzenie, które montujemy, to sprzęt wysokiej klasy – objęty gwarancją i serwisem.
+              </p>
+            </div>
           </div>
-          <h3>Kompleksowa Obsługa</h3>
-          <p>Doradzimy, pomożemy w doborze najlepszego rozwiązania i profesjonalnie zamontujemy klimatyzator w Twoim domu lub biurze, dbając o każdy detal.</p>
         </div>
-        
-        <div className="card">
-          <div className="card-icon">
-            <FaTools size={48} color="#0C708A" />
-          </div>
-          <h3>Serwis i Wsparcie</h3>
-          <p>Oferujemy pełen serwis oraz stałe wsparcie techniczne, abyś mógł cieszyć się komfortem przez cały rok. Jesteśmy do Twojej dyspozycji w każdej chwili.</p>
+
+        <div className="bottom-section text-center">
+          <p className="lead mb-3">Zainwestuj w jakość, funkcjonalność i profesjonalny montaż. Zaufaj specjalistom od klimatyzacji.</p>
+          <button className="custom-button" onClick={handleWycenaClick}>
+            Zamów wycenę
+          </button>
         </div>
       </div>
-      <div className="call-to-action text-center mt-5">
-        <p>Nie czekaj, skontaktuj się z nami już dziś i przekonaj się, jak wiele może zmienić nowoczesna klimatyzacja!</p>
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default DlaczegoMy;

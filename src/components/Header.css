@@ -16,7 +16,15 @@
     }
   }
 
-  .header-video {
-    pointer-events: none !important;
-  }
+.header-video {
+  height: 100vh; /* pełna wysokość okna przeglądarki */
+  width: 100%;
+  object-fit: cover; /* zapewnia odpowiednie skalowanie */
+  pointer-events: none !important;
+}
+
+.carousel-item {
+  height: 65vh;
+}
+
   

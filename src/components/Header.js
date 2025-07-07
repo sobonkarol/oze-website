@@ -12,7 +12,7 @@ const Header = () => {
         <div className="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
           <div className="bg-overlay">
           <h1 className="display-1 text-uppercase text-with-border p-3">Think OZE</h1>
-          <p className="lead p-2 slogan-test">Twoje wsparcie w kompletowaniu zestawów PV</p>
+          <p className="lead p-2 slogan-test">Klimatyzacja - Hurtownia OZE - Magazyny Energii</p>
           </div>
         </div>
       </Carousel.Item>

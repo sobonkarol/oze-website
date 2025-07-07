@@ -7,6 +7,7 @@ import DlaczegoMy from './components/DlaczegoMy';
 import Products from './components/Products';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Blog from './components/Blog';
 import ScrollToTopButton from './components/ScrollToTopButton'; // Import nowego komponentu
 import { ProductProvider } from './components/ProductContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,12 +17,15 @@ function App() {
     <ProductProvider>
       <Navigation />
       <Header />
+            <section id="dlaczegoMy">
+        <DlaczegoMy />
+      </section>
       <section id="products">
         <Products />
       </section>
-      <section id="dlaczegoMy">
-        <DlaczegoMy />
-      </section>
+      <section id="blog">
+  <Blog />
+</section>
       <section id="about">
         <About />
       </section>

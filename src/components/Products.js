@@ -28,6 +28,7 @@ const Products = () => {
   return (
     <section className="products-section" id="products-section">
       <div className="section-content">
+        <h2 className="text-center mb-5" style={{ color: "black" }}>Fotowoltaika</h2>
         <div className="card-container">
           {products.map((product) => (
             <div className="card" key={product._id}>

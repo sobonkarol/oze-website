@@ -1,0 +1,48 @@
+.why-us-section {
+  padding: 60px 0;
+  position: relative;
+}
+
+.white-divider {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.why-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.bottom-section {
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin-top: 60px;
+  background-color: rgba(255, 255, 255, 0.05); /* bardzo subtelne odcięcie */
+}
+
+.custom-button {
+  background-color: #0C708A;
+  color: white;
+  padding: 14px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.custom-button:hover {
+  background-color: #095968;
+}
+
+.highlight-block {
+  background-color: rgba(255, 255, 255, 0.05); /* bardzo subtelne tło */
+  border-radius: 16px;
+  padding: 40px 20px;
+}
