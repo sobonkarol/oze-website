@@ -51,9 +51,8 @@ const Navigation = () => {
             {/* BANER RZETELNA FIRMA */}
    
           </Navbar.Brand>
-
-          <div className="navbar-contact-info">
-                     <a
+<div className="rzetelna">
+   <a
               className="rz-logo"
               href="https://wizytowka.rzetelnafirma.pl/IAWLAU6HS353IWTS"
               target="_blank"
@@ -67,6 +66,8 @@ const Navigation = () => {
                 style={{ border: "none" }}
               />
             </a>
+</div>
+          <div className="navbar-contact-info">
             <a href="tel:+48694413377" className="navbar-contact-item">
               <FaPhoneAlt />
               +48 694 413 377

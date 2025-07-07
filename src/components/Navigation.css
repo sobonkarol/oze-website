@@ -6,7 +6,7 @@ body, html {
 
 /* Stylizacja navbar */
 .navbar-custom {
-  position: fixed; /* Zmieniono z relative na fixed */
+  position: absolute; /* Zmieniono z relative na fixed */
   top: 0;
   left: 0;
   width: 100%; /* Pełna szerokość */
@@ -65,7 +65,7 @@ body, html {
     padding: auto;
     height: auto;
   }
-
+  .rzetelna
   .navbar-brand-center,
   .navbar-contact-info,
   .navbar-toggler-custom {
@@ -189,6 +189,14 @@ body, html {
   cursor: pointer;
 }
 
+.rzetelna {
+    position: absolute; /* Pozwala na pozycjonowanie względem navbara */
+  left: 30%; /* Ustawienie lewego krańca na 50% szerokości navbara */
+  transform: translateX(-50%); /* Przesunięcie o połowę szerokości, aby wycentrować */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 /* Wyśrodkowanie sekcji kontaktu w nawigacji */
 .navbar-contact-info {
   position: absolute; /* Pozwala na pozycjonowanie względem navbara */
@@ -225,7 +233,11 @@ body, html {
     padding: auto;
     height: auto; /* Pozwoli na dynamiczną wysokość */
   }
-
+.rzetelna{
+      position: static; /* Resetuje pozycjonowanie */
+    transform: none; /* Usuwa transformacje */
+    margin-top: 10px; /* Dodaje odstęp od góry */
+}
   .navbar-contact-info {
     position: static; /* Resetuje pozycjonowanie */
     transform: none; /* Usuwa transformacje */
