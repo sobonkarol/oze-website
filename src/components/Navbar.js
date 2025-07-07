@@ -47,6 +47,23 @@ const Navigation = () => {
             <div className="think-oz-text clickable" onClick={scrollToTop}>
               think oze
             </div>
+
+            {/* BANER RZETELNA FIRMA */}
+            <a
+              className="rz-logo"
+              href="https://wizytowka.rzetelnafirma.pl/IAWLAU6HS353IWTS"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ marginLeft: "150px" }}
+            >
+              <img
+                src="https://aktywnybaner.rzetelnafirma.pl/ActiveBanner/GetActiveBannerImage/3/IAWLAU6HS353IWTS"
+                alt="Rzetelna Firma"
+                width={160}
+                height={75}
+                style={{ border: "none" }}
+              />
+            </a>
           </Navbar.Brand>
 
           <div className="navbar-contact-info">
