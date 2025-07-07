@@ -49,12 +49,15 @@ const Navigation = () => {
             </div>
 
             {/* BANER RZETELNA FIRMA */}
-            <a
+   
+          </Navbar.Brand>
+
+          <div className="navbar-contact-info">
+                     <a
               className="rz-logo"
               href="https://wizytowka.rzetelnafirma.pl/IAWLAU6HS353IWTS"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ marginLeft: "150px" }}
             >
               <img
                 src="https://aktywnybaner.rzetelnafirma.pl/ActiveBanner/GetActiveBannerImage/3/IAWLAU6HS353IWTS"
@@ -64,9 +67,6 @@ const Navigation = () => {
                 style={{ border: "none" }}
               />
             </a>
-          </Navbar.Brand>
-
-          <div className="navbar-contact-info">
             <a href="tel:+48694413377" className="navbar-contact-item">
               <FaPhoneAlt />
               +48 694 413 377
