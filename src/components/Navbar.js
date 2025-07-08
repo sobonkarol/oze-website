@@ -107,7 +107,7 @@ const Navigation = () => {
                 className={`nav-link-custom ${activeLink === "products" ? "active" : ""}`}
                 onClick={() => handleLinkClick("products")}
               >
-                Fotowoltaika
+                Hurtownia fotowolaticzna
               </Nav.Link>
               <div className="nav-divider"></div>
 
